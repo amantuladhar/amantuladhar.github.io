@@ -190,7 +190,7 @@ p label span.colon {
     height: 180px;
     overflow: hidden;
     float: right;
-    border-radius: 100%;
+    border-radius: 5%;
     vertical-align: middle;
 }
 
