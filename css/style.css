@@ -235,3 +235,7 @@ p label span.colon {
 :root #header + #content > #left > #rlblock_left, :root .addthis_toolbox {
     display: none !important;
 }
+
+a[href^='mailto']:link {
+    text-decoration: none;
+}
