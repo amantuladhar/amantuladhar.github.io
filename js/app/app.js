@@ -378,11 +378,11 @@
             var ContactController = this;
             ContactController.contact = {
                 social: {
-                    instagram: "instagram",
-                    facebook: "facebook",
-                    twitter: "twitter",
-                    linkedin: "linkedin",
-                    github: "github"
+                    instagram: "https://www.instagram.com/atuladhar.aman/",
+                    facebook: "https://www.facebook.com/atuladhar.aman",
+                    twitter: "https://twitter.com/atuladhar_aman",
+                    linkedin: "https://www.linkedin.com/in/aman-tuladhar-572878ba?trk=hp-identity-name",
+                    github: "https://github.com/atuladhar-aman/"
                 },
                 firstName: "Aman",
                 lastName: "Tuladhar",
