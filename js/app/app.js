@@ -387,7 +387,7 @@
                 firstName: "Aman",
                 lastName: "Tuladhar",
                 jobTitle: "Java Developer / Programmer",
-                objective: "Seeking a competitive and challenging environment where I can serve your organization and establish an enjoyable career for myself.",
+                objective: "Seeking a Competitive and Enjoyable Environment where I'm constantly challenged and given a chance to learn new things",
                 email: "atuladhar.aman@gmail.com",
                 address: "Wotu Tole, Ward 24 Kathmandu - Nepal",
                 phone: "+977 9841963787"
