@@ -23,6 +23,10 @@
 /* ==========================================================
 ! 01. MIXINS / VARIABLES
 ==============	=========================================== */
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
 .color1 {
     color: #08aeac;
 }
