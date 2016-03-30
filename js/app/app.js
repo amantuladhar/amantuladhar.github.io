@@ -33,16 +33,40 @@
                     controller: 'ContactController',
                     controllerAs: 'cc'
                 })
+                .state('page-all', {
+                    url: '/page-all',
+                    views: {
+                        '': {
+                            templateUrl: 'template/section-all-template.html',
+                        },
+                        'resume@page-all': {
+                            templateUrl: 'template/section-resume-template.html',
+                            controller: 'ResumeController',
+                            controllerAs: 'rc'
+                        },
+                        'skill@page-all': {
+                            templateUrl: 'template/section-skill-template.html',
+                            controller: 'SkillController',
+                            controllerAs: 'sc'
+                        },
+                        'contact@page-all': {
+                            templateUrl: 'template/section-contact-template.html',
+                            controller: 'ContactController',
+                            controllerAs: 'cc'
+                        }
+                    }
+                })
             ;
         }])
-        .run(['$rootScope', '$timeout', function ($rootScope, $timeout) {
+        .run(['$rootScope', '$timeout', '$window', function ($rootScope, $timeout, $window) {
+
 
             var addBehaviourToState = function (stateName) {
                 // debugger;
 
                 var $element = $('a[ui-sref=' + stateName + ']');
 
-                if (stateName === 'section-home') {
+                if (stateName === 'section-home' || stateName === 'page-all') {
 
                     $('.menuActive').removeClass('menuActive');
                     $($element).addClass('menuActive');
@@ -69,7 +93,7 @@
                             wheelSpeed: 0.9
                         });
                     }, 300);
-                    
+
                 }
             };
 
@@ -350,7 +374,7 @@
             };
         }])
 
-        .controller('ContactController', [function () {
+        .controller('ContactController', ['$scope', '$window', function ($scope, $window) {
             var ContactController = this;
             ContactController.contact = {
                 social: {
@@ -368,6 +392,41 @@
                 address: "Wotu Tole, Ward 24 Kathmandu - Nepal",
                 phone: "+977 9841963787"
             };
-        }]);
+        }])
+        .directive('detectWindowResize', ['$window', '$state', function ($window, $state) {
 
+            return {
+                link: link,
+                restrict: 'E',
+                template: '{{changeState()}}'
+            };
+
+            function link(scope, element, attrs) {
+                scope.resizeProp = {};
+                scope.resizeProp.width = $window.innerWidth;
+                scope.resizeProp.changed = false;
+
+                angular.element($window).bind('resize', function () {
+
+
+                    scope.resizeProp.width = $window.innerWidth;
+                    scope.resizeProp.changed = false;
+                    // manuall $digest required as resize event
+                    // is outside of angular
+                    scope.$digest();
+                });
+
+                scope.changeState = function () {
+                    if (scope.resizeProp.width <= 991 && !scope.resizeProp.changed) {
+                        $state.go("page-all");
+                        scope.resizeProp.changed = true;
+                    } else if (!scope.resizeProp.changed && scope.resizeProp.width > 991) {
+                        $state.go("section-home");
+                        scope.resizeProp.changed = true;
+                    }
+                };
+
+            }
+
+        }]);
 })(angular);
