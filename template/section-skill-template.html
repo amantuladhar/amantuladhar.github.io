@@ -1,0 +1,33 @@
+<!-- SECTION: SKILLS-->
+<div class="section-vcardbody section-page" id="page-skills">
+    <div class="section-skills">
+
+        <!-- Section title -->
+        <h2 class="section-title">SKILLS</h2>
+        <!-- /Section title -->
+
+        <div ng-repeat="skill in sc.skills">
+
+            <!-- Subtitle -->
+            <h3 class="section-item-title-2">&nbsp;&nbsp; {{skill.title}}</h3>
+            <!-- /Subtitle -->
+
+            <!-- Skils List -->
+            <ul class="skills-list" >
+                <!-- item-list -->
+                <li ng-repeat="singleSkill in skill.data">
+                    <div class="progress" title="I'm {{singleSkill.title}} at this">
+                        <div class="progress-bar progress-bar-{{$index + 1}}" role="progressbar" data-percent="{{ sc.x = singleSkill.level | percentage}}" style="width: {{}};background: {{ sc.bg() }}">
+                            <span class="sr-only">{{singleSkill.level | percentage }} Complete </span>
+                        </div>
+                        <span class="progress-type">{{singleSkill.title}}</span>
+                        <span class="progress-completed">{{singleSkill.level}}</span>
+                    </div>
+                </li>
+                <!-- /item list -->
+            </ul>
+            <!-- /Skils List -->
+        </div>
+    </div>
+</div>
+<!-- /SECTION: SKILLS  -->
