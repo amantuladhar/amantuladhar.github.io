@@ -72,7 +72,7 @@
                 $('.section-page-active').removeClass('section-page-active');
                 $(linkPage).addClass('section-page-active');
                 pageOn();
-            },200)
+            },300)
 
         });
 
