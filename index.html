@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aman Tuladhar - Java Developer / Programmer</title>
+
+    <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+    <!-- / Favicons
+    ================================================== -->
+
+    <!-- >> CSS
+    ============================================================================== -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="vendor/nivo-lightbox/nivo-lightbox.css" rel="stylesheet">
+    <link rel="stylesheet" href="vendor/nivo-lightbox/themes/default/default.css" type="text/css"/>
+    <link href="vendor/perfect-scrollbar/css/perfect-scrollbar.min.css" rel="stylesheet">
+    <link href="vendor/owl.carousel/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="vendor/owl.carousel/owl-carousel/owl.theme.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <!-- >> /CSS
+    ============================================================================== -->
+</head>
+<body ng-app="ResumeApp">
+<!-- Page Loader
+========================================================= -->
+<div class="loader-container" id="page-loader">
+    <div class="loading-wrapper">
+        <div class="loader-animation" id="loader-animation">
+            <span class="loader"><span class="loader-inner"></span></span>
+        </div>
+        <div class="loader-name" id="loader-name">
+            Aman <strong>Tuladhar</strong>
+        </div>
+        <p class="loader-job" id="loader-job">Java Developer / Programmer</p>
+    </div>
+</div>
+<!-- /End of Page loader
+========================================================= -->
+
+<!-- Main Content
+================================================== -->
+<section id="body" class="">
+
+    <div class="container">
+
+        <!-- MAIN MENU -->
+        <div class="main-menu" id="main-menu">
+            <ul class="main-menu-list">
+                <li><a ui-sref="section-home" class="link-home">Home</a></li>
+                <li><a ui-sref="page-resume" class="link-page">Resume</a></li>
+                <li><a ui-sref="page-skills" class="link-page">Skills</a></li>
+                <li><a ng-if="false" ui-sref="page-blog" class="link-page">Blog</a></li>
+                <li><a ui-sref="page-contact" class="link-page">Contact</a></li>
+            </ul>
+        </div>
+        <!-- /MAIN MENU -->
+
+        <!-- SECTION: vCard Body  -->
+        <div class="section-vcardbody section-home" id="section-home" ng-controller="ContactController as cc">
+            <!-- Profile pic-->
+            <div class="vcard-profile-pic">
+                <img src="img/profile2.png" id="profile2" alt=""/>
+                <img src="img/profile.png" id="profile1" class="profileActive" alt=""/>
+            </div>
+            <!-- /Profile pic -->
+            <!-- Description -->
+            <div class="vcard-profile-description">
+                <!-- Profile title -->
+                <h1 class="profile-title">Hi, i'm <span
+                        class="color1">{{cc.contact.firstName}} {{cc.contact.lastName}}!</span></h1>
+                <h2 class="profile-subtitle">{{cc.contact.jobTitle}}</h2>
+                <!-- /Profile Title -->
+                <!-- Description Text -->
+                <hr class="hr1">
+                <div class="vcard-profile-description-text">
+                    <p>{{cc.contact.objective}}</p>
+                </div>
+                <!--/ Description Text -->
+                <!-- Description feature -->
+                <div class="vcard-profile-description-feature">
+                    <!-- item -->
+                    <div class="vcard-profile-description-ft-item">
+                        <p>email: {{cc.contact.email}}</p>
+                    </div>
+                    <!-- item -->
+                </div>
+                <!-- /Description feature -->
+            </div>
+            <!-- /Description -->
+            <!-- Footer -->
+            <div class="vcard-footer">
+                <!-- Social Icons -->
+                <div class="footer-social-icons">
+                    <a href="{{cc.contact.social.github}}"><i class="fa fa-github"></i></a>
+                    <a href="{{cc.contact.social.twitter}}"><i class="fa fa-twitter"></i></a>
+                    <a href="{{cc.contact.social.facebook}}"><i class="fa fa-facebook"></i></a>
+                    <a href="{{cc.contact.social.linkedin}}"><i class="fa fa-linkedin"></i></a>
+                    <a href="{{cc.contact.social.instagram}}"><i class="fa fa-instagram"></i></a>
+                </div>
+                <!-- /Social Icons -->
+            </div>
+        </div>
+        <!-- /SECTION: vCard Body  -->
+        <div class="ui-view-container">
+            <div ui-view></div>
+        </div>
+
+    </div>
+
+</section>
+<!-- /Main Content
+================================================== -->
+
+
+<!-- >> JS
+============================================================================== -->
+
+<script src="vendor/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="vendor/angular/angular.js"></script>
+<script src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="vendor/angular-resource/angular-resource.js"></script>
+<script src="vendor/angular-animate/angular-animate.js"></script>
+<script src="vendor/validate.js"></script>
+<script src="vendor/holder.js"></script>
+<script src="vendor/nivo-lightbox/nivo-lightbox.min.js"></script>
+<script src="vendor/perfect-scrollbar/js/min/perfect-scrollbar.jquery.min.js"></script>
+<script src="vendor/owl.carousel/owl-carousel/owl.carousel.js"></script>
+<script src="vendor/cross-browser.js"></script>
+<script src="js/main.js"></script>
+<script src="js/app/app.js"></script>
+
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="vendor/html5shiv.js"></script>
+<script src="vendor/respond.min.js"></script>
+<![endif]-->
+<!-- >> /JS
+============================================================================= -->
+</body>
+
+<!-- Mirrored from dotrex.co/theme-preview/cards/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 27 Mar 2016 18:40:21 GMT -->
+</html>
