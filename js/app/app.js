@@ -35,6 +35,49 @@
                 })
             ;
         }])
+        .run(['$rootScope', '$timeout', function ($rootScope, $timeout) {
+
+            var addBehaviourToState = function (stateName) {
+                // debugger;
+
+                var $element = $('a[ui-sref=' + stateName + ']');
+
+                if (stateName === 'section-home') {
+
+                    $('.menuActive').removeClass('menuActive');
+                    $($element).addClass('menuActive');
+                    $('.section-page-active').removeClass('section-page-active');
+                    $('#main-menu').removeClass('main-menu-pgactive');
+                    $('#section-home').removeClass('section-vcardbody-pgactive');
+                    $('.profileActive').removeClass('profileActive');
+                    $('#profile1').addClass('profileActive');
+
+                } else {
+
+                    $timeout(function () {
+                        var linkPage = '#' + $($element).attr('ui-sref');
+                        $('.menuActive').removeClass('menuActive');
+                        $($element).addClass('menuActive');
+                        $('.section-page-active').removeClass('section-page-active');
+                        $(linkPage).addClass('section-page-active');
+
+                        $('#main-menu').addClass('main-menu-pgactive');
+                        $('#section-home').addClass('section-vcardbody-pgactive');
+                        $('.profileActive').removeClass('profileActive');
+                        $('#profile2').addClass('profileActive');
+                        $('.section-vcardbody').perfectScrollbar({
+                            wheelSpeed: 0.9
+                        });
+                    }, 300);
+                    
+                }
+            };
+
+            $rootScope.$on('$stateChangeSuccess',
+                function (event, toState, toParams, fromState, fromParams) {
+                    addBehaviourToState(toState.name);
+                })
+        }])
         .filter('percentage', function () {
             var random = function (start, range) {
                 var r = Math.floor(Math.random() * range) + start;
@@ -43,21 +86,23 @@
             return function (input) {
                 switch (input) {
                     case 'Confident':
-                        return  random(70,10);
+                        return random(70, 10);
                     case 'Very Good':
-                        return random(50,10);
+                        return random(50, 10);
                     case 'Good':
-                        return random(25,10);
+                        return random(25, 10);
                     default:
-                        return random(50,10);
-            };
-        }})
+                        return random(50, 10);
+                }
+                ;
+            }
+        })
 
-        .controller('SkillController', ['percentageFilter',function (percentageFilter) {
+        .controller('SkillController', ['percentageFilter', function (percentageFilter) {
             var SkillController = this;
 
-            SkillController.bg = function() {
-             return   '#' + Math.floor(Math.random() * 16777215).toString(16);
+            SkillController.bg = function () {
+                return '#' + Math.floor(Math.random() * 16777215).toString(16);
             };
 
             SkillController.skills = [
