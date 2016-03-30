@@ -43,98 +43,134 @@
             return function (input) {
                 switch (input) {
                     case 'Confident':
-                        return random(65, 15)
+                        return  random(70,10);
                     case 'Very Good':
-                        return random(45, 15);
+                        return random(50,10);
                     case 'Good':
-                        return random(20, 25);
+                        return random(25,10);
                     default:
-                        return random(45, 15);
-                        ;
-                }
+                        return random(50,10);
             };
-        })
+        }})
 
-        .controller('SkillController', [function () {
+        .controller('SkillController', ['percentageFilter',function (percentageFilter) {
             var SkillController = this;
-            SkillController.bg = function () {
-                return '#' + Math.floor(Math.random() * 16777215).toString(16);
+
+            SkillController.bg = function() {
+             return   '#' + Math.floor(Math.random() * 16777215).toString(16);
             };
+
             SkillController.skills = [
                 {
-                    title: 'Code Skill',
+                    title: 'Technical Skills',
                     data: [
                         {
                             title: "Java",
-                            level: 'Confident'
+                            level: 'Confident',
+                            background: SkillController.bg(),
+                            percentage: percentageFilter('Confident')
                         },
                         {
                             title: 'Spring Framework',
-                            level: 'Confident'
+                            level: 'Confident',
+                            background: SkillController.bg(),
+                            percentage: percentageFilter('Confident')
                         },
                         {
                             title: 'Spring Boot',
-                            level: 'Confident'
+                            level: 'Confident',
+                            background: SkillController.bg(),
+                            percentage: percentageFilter('Confident')
                         },
                         {
                             title: 'Git',
-                            level: 'Confident'
+                            level: 'Confident',
+                            background: SkillController.bg(),
+                            percentage: percentageFilter('Confident')
                         },
                         {
                             title: 'Maven & Gradle',
-                            level: 'Confident'
+                            level: 'Confident',
+                            background: SkillController.bg(),
+                            percentage: percentageFilter('Confident')
                         },
                         {
                             title: 'Hibernate',
-                            level: 'Very Good'
+                            level: 'Very Good',
+                            background: SkillController.bg(),
+                            percentage: percentageFilter('Very Good')
                         },
                         {
                             title: 'TestNG & JUnit',
-                            level: 'Confident'
+                            level: 'Confident',
+                            background: SkillController.bg(),
+                            percentage: percentageFilter('Confident')
                         },
                         {
                             title: 'GulpJS',
-                            level: 'Good'
+                            level: 'Good',
+                            background: SkillController.bg(),
+                            percentage: percentageFilter('Good')
                         },
                         {
                             title: 'GruntJS',
-                            level: 'Good'
+                            level: 'Good',
+                            background: SkillController.bg(),
+                            percentage: percentageFilter('Good')
                         },
                         {
                             title: 'MySQL',
-                            level: 'Confident'
+                            level: 'Confident',
+                            background: SkillController.bg(),
+                            percentage: percentageFilter('Confident')
                         },
                         {
                             title: 'Selenium',
-                            level: 'Confident'
+                            level: 'Confident',
+                            background: SkillController.bg(),
+                            percentage: percentageFilter('Confident')
                         },
                         {
                             title: 'Javascript',
-                            level: 'Confident'
+                            level: 'Confident',
+                            background: SkillController.bg(),
+                            percentage: percentageFilter('Confident')
                         },
                         {
                             title: 'JQuery',
-                            level: 'Confident'
+                            level: 'Confident',
+                            background: SkillController.bg(),
+                            percentage: percentageFilter('Confident')
                         },
                         {
                             title: 'Android Programming',
-                            level: 'Good'
+                            level: 'Good',
+                            background: SkillController.bg(),
+                            percentage: percentageFilter('Good')
                         },
                         {
                             title: 'Mercurial',
-                            level: 'Good'
+                            level: 'Good',
+                            background: SkillController.bg(),
+                            percentage: percentageFilter('Good')
                         },
                         {
                             title: 'C and C++',
-                            level: 'Very Good'
+                            level: 'Very Good',
+                            background: SkillController.bg(),
+                            percentage: percentageFilter('Very Good')
                         },
                         {
                             title: 'AngularJS 1.x',
-                            level: 'Very Good'
+                            level: 'Very Good',
+                            background: SkillController.bg(),
+                            percentage: percentageFilter('Very Good')
                         },
                         {
                             title: 'NPM and Bower',
-                            level: 'Very Good'
+                            level: 'Very Good',
+                            background: SkillController.bg(),
+                            percentage: percentageFilter('Very Good')
                         }
                     ]
                 },
@@ -143,39 +179,57 @@
                     data: [
                         {
                             title: "IntelliJ IDEA",
-                            level: 'Confident'
+                            level: 'Confident',
+                            background: SkillController.bg(),
+                            percentage: percentageFilter('Confident')
                         },
                         {
                             title: "Sublime",
-                            level: 'Very Good'
+                            level: 'Very Good',
+                            background: SkillController.bg(),
+                            percentage: percentageFilter('Very Good')
                         },
                         {
                             title: 'Microsoft Office',
-                            level: 'Very Good'
+                            level: 'Very Good',
+                            background: SkillController.bg(),
+                            percentage: percentageFilter('Very Good')
                         },
                         {
                             title: 'Smart Git & Source Tree',
-                            level: 'Confident'
+                            level: 'Confident',
+                            background: SkillController.bg(),
+                            percentage: percentageFilter('Confident')
                         },
                         {
                             title: 'Linux',
-                            level: 'Very Good'
+                            level: 'Very Good',
+                            background: SkillController.bg(),
+                            percentage: percentageFilter('Very Good')
                         },
                         {
-                            title: 'SqlYog and WorkBench',
-                            level: 'Very Good'
+                            title: 'SQLyog and MySQL Workbench',
+                            level: 'Very Good',
+                            background: SkillController.bg(),
+                            percentage: percentageFilter('Very Good')
                         },
                         {
                             title: 'Adobe Photoshop',
-                            level: 'Good'
+                            level: 'Good',
+                            background: SkillController.bg(),
+                            percentage: percentageFilter('Good')
                         },
                         {
                             title: 'Windows',
-                            level: 'Very Good'
+                            level: 'Very Good',
+                            background: SkillController.bg(),
+                            percentage: percentageFilter('Very Good')
                         },
                         {
                             title: 'Bash And Zsh',
-                            level: 'Good'
+                            level: 'Good',
+                            background: SkillController.bg(),
+                            percentage: percentageFilter('Good')
                         }
                     ]
                 },
@@ -185,21 +239,25 @@
                     data: [
                         {
                             title: "Communication",
-                            level: 'Confident'
+                            level: 'Confident',
+                            background: SkillController.bg(),
+                            percentage: percentageFilter('Confident')
                         },
                         {
                             title: 'Leadership',
-                            level: 'Good'
+                            level: 'Good',
+                            background: SkillController.bg(),
+                            percentage: percentageFilter('Good')
                         },
                         {
                             title: 'Confidence',
-                            level: 'Very Good'
+                            level: 'Very Good',
+                            background: SkillController.bg(),
+                            percentage: percentageFilter('Very Good')
                         }
                     ]
-                },
+                }
             ];
-
-
         }])
 
         .controller('ResumeController', [function () {
