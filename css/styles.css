@@ -28,7 +28,7 @@
 }
 
 .color1 {
-    color: #08aeac;
+    color: #0269A4;
 }
 
 .color2 {
@@ -127,7 +127,7 @@ a:focus {
 .btn {
     font-weight: bold;
     color: #ffffff;
-    background: #08aeac;
+    background: #0269A4;
     border-radius: 0;
     font-size: 12px;
     padding: 10px 20px;
@@ -147,7 +147,7 @@ a:focus {
     padding: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
-    background: #008c8a !important;
+    background: #0269A4 !important;
     color: #ffffff;
     font-weight: bold;
     text-transform: uppercase;
@@ -244,8 +244,8 @@ iframe {
 #page-loader {
     width: 100%;
     height: 100%;
-    background: #008c8a;
-    color: #08aeac;
+    background: #778686;
+    color: #0269A4;
     opacity: 0.99;
     position: fixed;
     top: 0;
@@ -457,7 +457,7 @@ iframe {
 
 .footer-social-icons a:hover {
     color: #ffffff;
-    background: #08aeac;
+    background: #0269A4;
 }
 
 /* ==========================================================
@@ -636,7 +636,7 @@ iframe {
 
 .main-menu-list a {
     display: block;
-    background: #08aeac;
+    background: #0269A4;
     padding: 10px;
     color: #ffffff;
     text-transform: uppercase;
@@ -770,7 +770,7 @@ iframe {
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     padding: 10px;
-    background: url('../img/bg-btn.png') no-repeat center center #08aeac;
+    background: url('../img/bg-btn.png') no-repeat center center #0269A4;
 }
 
 .vcard-profile-description-ft-item p {
@@ -796,7 +796,7 @@ iframe {
 
 .section-title2 {
     font-weight: bold;
-    color: #08aeac;
+    color: #0269A4;
     font-size: 20px;
     line-height: 24px;
     letter-spacing: -1px;
@@ -804,7 +804,7 @@ iframe {
     padding-left: 15px;
     padding-top: 5px;
     padding-bottom: 5px;
-    border-left: 4px solid #08aeac;
+    border-left: 4px solid #0269A4;
 }
 
 .resume-item {
@@ -1080,7 +1080,7 @@ iframe {
 }
 
 .progress-bar {
-    background: #08aeac;
+    background: #0269A4;
     width: 20%;
 }
 
@@ -1312,7 +1312,7 @@ span.see-more {
     padding-left: 10px;
     padding-right: 10px;
     color: #ffffff;
-    background: #08aeac;
+    background: #0269A4;
     font-weight: bold;
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
@@ -1364,7 +1364,7 @@ span.see-more {
 }
 
 .blog-comments-title {
-    border-bottom: 1px dotted #08aeac;
+    border-bottom: 1px dotted #0269A4;
     padding-bottom: 10px;
     margin-bottom: 10px;
 }
@@ -1410,7 +1410,7 @@ span.see-more {
     margin-bottom: 20px;
     margin-top: 40px;
     font-size: 18px;
-    color: #08aeac;
+    color: #0269A4;
 }
 
 .media-heading {
@@ -1474,14 +1474,14 @@ span.see-more {
 ! 17. SECTION: Contact
 ========================================================== */
 .contact-subtitle-1 {
-    color: #08aeac;
+    color: #0269A4;
     font-size: 14px;
     letter-spacing: -1px;
     font-weight: bold;
     margin-bottom: 8px;
     margin-top: 25px;
     padding-bottom: 5px;
-    border-bottom: 1px dotted #08aeac;
+    border-bottom: 1px dotted #0269A4;
 }
 
 .contact-subtitle-1:first-child {
