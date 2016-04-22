@@ -109,11 +109,11 @@
             };
             return function (input) {
                 switch (input) {
-                    case 'Confident':
+                    case 'PROFICIENT':
                         return random(70, 10);
-                    case 'Very Good':
+                    case 'FAMILIAR':
                         return random(50, 10);
-                    case 'Good':
+                    case 'BEGINNER':
                         return random(25, 10);
                     default:
                         return random(50, 10);
@@ -135,111 +135,135 @@
                     data: [
                         {
                             title: "Java",
-                            level: 'Confident',
+                            level: 'PROFICIENT',
                             background: SkillController.bg(),
-                            percentage: percentageFilter('Confident')
+                            percentage: percentageFilter('PROFICIENT')
                         },
                         {
                             title: 'Spring Framework',
-                            level: 'Confident',
+                            level: 'PROFICIENT',
                             background: SkillController.bg(),
-                            percentage: percentageFilter('Confident')
+                            percentage: percentageFilter('PROFICIENT')
                         },
                         {
                             title: 'Spring Boot',
-                            level: 'Confident',
+                            level: 'PROFICIENT',
                             background: SkillController.bg(),
-                            percentage: percentageFilter('Confident')
+                            percentage: percentageFilter('PROFICIENT')
                         },
                         {
                             title: 'Git',
-                            level: 'Confident',
+                            level: 'PROFICIENT',
                             background: SkillController.bg(),
-                            percentage: percentageFilter('Confident')
+                            percentage: percentageFilter('PROFICIENT')
                         },
                         {
                             title: 'Maven & Gradle',
-                            level: 'Confident',
+                            level: 'PROFICIENT',
                             background: SkillController.bg(),
-                            percentage: percentageFilter('Confident')
+                            percentage: percentageFilter('PROFICIENT')
                         },
                         {
                             title: 'Hibernate',
-                            level: 'Very Good',
+                            level: 'FAMILIAR',
                             background: SkillController.bg(),
-                            percentage: percentageFilter('Very Good')
+                            percentage: percentageFilter('FAMILIAR')
                         },
                         {
                             title: 'TestNG & JUnit',
-                            level: 'Confident',
+                            level: 'PROFICIENT',
                             background: SkillController.bg(),
-                            percentage: percentageFilter('Confident')
+                            percentage: percentageFilter('PROFICIENT')
                         },
                         {
                             title: 'GulpJS',
-                            level: 'Good',
+                            level: 'BEGINNER',
                             background: SkillController.bg(),
-                            percentage: percentageFilter('Good')
+                            percentage: percentageFilter('BEGINNER')
                         },
                         {
                             title: 'GruntJS',
-                            level: 'Good',
+                            level: 'BEGINNER',
                             background: SkillController.bg(),
-                            percentage: percentageFilter('Good')
+                            percentage: percentageFilter('BEGINNER')
                         },
                         {
                             title: 'MySQL',
-                            level: 'Confident',
+                            level: 'PROFICIENT',
                             background: SkillController.bg(),
-                            percentage: percentageFilter('Confident')
+                            percentage: percentageFilter('PROFICIENT')
                         },
                         {
                             title: 'Selenium',
-                            level: 'Confident',
+                            level: 'PROFICIENT',
                             background: SkillController.bg(),
-                            percentage: percentageFilter('Confident')
+                            percentage: percentageFilter('PROFICIENT')
                         },
                         {
                             title: 'Javascript',
-                            level: 'Confident',
+                            level: 'PROFICIENT',
                             background: SkillController.bg(),
-                            percentage: percentageFilter('Confident')
+                            percentage: percentageFilter('PROFICIENT')
                         },
                         {
                             title: 'JQuery',
-                            level: 'Confident',
+                            level: 'PROFICIENT',
                             background: SkillController.bg(),
-                            percentage: percentageFilter('Confident')
+                            percentage: percentageFilter('PROFICIENT')
                         },
                         {
                             title: 'Android Programming',
-                            level: 'Good',
+                            level: 'BEGINNER',
                             background: SkillController.bg(),
-                            percentage: percentageFilter('Good')
+                            percentage: percentageFilter('BEGINNER')
                         },
                         {
                             title: 'Mercurial',
-                            level: 'Good',
+                            level: 'BEGINNER',
                             background: SkillController.bg(),
-                            percentage: percentageFilter('Good')
+                            percentage: percentageFilter('BEGINNER')
                         },
                         {
                             title: 'C and C++',
-                            level: 'Very Good',
+                            level: 'FAMILIAR',
                             background: SkillController.bg(),
-                            percentage: percentageFilter('Very Good')
+                            percentage: percentageFilter('FAMILIAR')
                         },
                         {
                             title: 'AngularJS 1.x',
-                            level: 'Very Good',
+                            level: 'FAMILIAR',
                             background: SkillController.bg(),
-                            percentage: percentageFilter('Very Good')
+                            percentage: percentageFilter('FAMILIAR')
                         },
                         {
                             title: 'NPM and Bower',
-                            level: 'Very Good',
+                            level: 'FAMILIAR',
                             background: SkillController.bg(),
-                            percentage: percentageFilter('Very Good')
+                            percentage: percentageFilter('FAMILIAR')
+                        },
+                        {
+                            title: 'Scala',
+                            level: 'FAMILIAR',
+                            background: SkillController.bg(),
+                            percentage: percentageFilter('FAMILIAR')
+                        },
+                        {
+                            title: 'Play Framework 2.x',
+                            level: 'BEGINNER',
+                            background: SkillController.bg(),
+                            percentage: percentageFilter('BEGINNER')
+                        },
+                        {
+                            title: 'JPA 2.x',
+                            level: 'FAMILIAR',
+                            background: SkillController.bg(),
+                            percentage: percentageFilter('FAMILIAR')
+                        },
+                        {
+                            title: 'Spring Data JPA',
+                            level: 'FAMILIAR',
+                            background: SkillController.bg(),
+                            percentage: percentageFilter('FAMILIAR')
                         }
                     ]
                 },
@@ -248,57 +272,57 @@
                     data: [
                         {
                             title: "IntelliJ IDEA",
-                            level: 'Confident',
+                            level: 'PROFICIENT',
                             background: SkillController.bg(),
-                            percentage: percentageFilter('Confident')
+                            percentage: percentageFilter('PROFICIENT')
                         },
                         {
                             title: "Sublime",
-                            level: 'Very Good',
+                            level: 'FAMILIAR',
                             background: SkillController.bg(),
-                            percentage: percentageFilter('Very Good')
+                            percentage: percentageFilter('FAMILIAR')
                         },
                         {
                             title: 'Microsoft Office',
-                            level: 'Very Good',
+                            level: 'FAMILIAR',
                             background: SkillController.bg(),
-                            percentage: percentageFilter('Very Good')
+                            percentage: percentageFilter('FAMILIAR')
                         },
                         {
                             title: 'Smart Git & Source Tree',
-                            level: 'Confident',
+                            level: 'PROFICIENT',
                             background: SkillController.bg(),
-                            percentage: percentageFilter('Confident')
+                            percentage: percentageFilter('PROFICIENT')
                         },
                         {
                             title: 'Linux',
-                            level: 'Very Good',
+                            level: 'FAMILIAR',
                             background: SkillController.bg(),
-                            percentage: percentageFilter('Very Good')
+                            percentage: percentageFilter('FAMILIAR')
                         },
                         {
                             title: 'SQLyog and MySQL Workbench',
-                            level: 'Very Good',
+                            level: 'FAMILIAR',
                             background: SkillController.bg(),
-                            percentage: percentageFilter('Very Good')
+                            percentage: percentageFilter('FAMILIAR')
                         },
                         {
                             title: 'Adobe Photoshop',
-                            level: 'Good',
+                            level: 'BEGINNER',
                             background: SkillController.bg(),
-                            percentage: percentageFilter('Good')
+                            percentage: percentageFilter('BEGINNER')
                         },
                         {
                             title: 'Windows',
-                            level: 'Very Good',
+                            level: 'FAMILIAR',
                             background: SkillController.bg(),
-                            percentage: percentageFilter('Very Good')
+                            percentage: percentageFilter('FAMILIAR')
                         },
                         {
                             title: 'Bash And Zsh',
-                            level: 'Good',
+                            level: 'BEGINNER',
                             background: SkillController.bg(),
-                            percentage: percentageFilter('Good')
+                            percentage: percentageFilter('BEGINNER')
                         }
                     ]
                 },
@@ -308,21 +332,21 @@
                     data: [
                         {
                             title: "Communication",
-                            level: 'Confident',
+                            level: 'PROFICIENT',
                             background: SkillController.bg(),
-                            percentage: percentageFilter('Confident')
+                            percentage: percentageFilter('PROFICIENT')
                         },
                         {
                             title: 'Leadership',
-                            level: 'Good',
+                            level: 'BEGINNER',
                             background: SkillController.bg(),
-                            percentage: percentageFilter('Good')
+                            percentage: percentageFilter('BEGINNER')
                         },
                         {
                             title: 'Confidence',
-                            level: 'Very Good',
+                            level: 'FAMILIAR',
                             background: SkillController.bg(),
-                            percentage: percentageFilter('Very Good')
+                            percentage: percentageFilter('FAMILIAR')
                         }
                     ]
                 }
@@ -338,7 +362,7 @@
                     university: "Tribhuvan University",
                     courseLength: "4 years",
                     graduationDay: "October 2015",
-                    detail: "Studied at National College of Computer Studies. Passes with overall average GPA 3.5+"
+                    detail: "Studied at National College of Computer Studies. Passes with overall average GPA 3.7+"
                 },
                 {
                     title: "Higher Secondary School",
@@ -369,7 +393,7 @@
                 }
             ];
             ResumeController.quote = {
-                message: "Your Future is Created by What You Do Toady not Tomorrow",
+                message: "Your Future is Created by What You Do Today not Tomorrow",
                 from: "Someone"
             };
         }])
