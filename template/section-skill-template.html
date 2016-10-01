@@ -13,11 +13,15 @@
             <!-- /Subtitle -->
 
             <!-- Skils List -->
-            <ul class="skills-list" >
+            <ul class="skills-list">
                 <!-- item-list -->
                 <li ng-repeat="singleSkill in skill.data">
                     <div class="progress" title="I'm {{singleSkill.level}} at this">
-                        <div class="progress-bar progress-bar-{{$index + 1}}" role="progressbar" data-percent="{{singleSkill.percentage}}" style="width: {{singleSkill.percentage }};background: {{ singleSkill.background }}">
+                        <div
+                                ng-init="randomBackgroundColor=sc.bg() ; rangePercentage=sc.percentage(singleSkill.level)"
+                                class="progress-bar progress-bar-{{$index + 1}}"
+                                role="progressbar" data-percent="{{singleSkill.percentage}}"
+                                style="width: {{rangePercentage}};background: {{randomBackgroundColor}}">
                             <span class="sr-only">{{singleSkill.percentage }} Complete </span>
                         </div>
                         <span class="progress-type">{{singleSkill.title}}</span>
