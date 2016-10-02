@@ -27,7 +27,7 @@ avatar: "/img/avatar-icon.png"
 
 # List of links in the navigation bar
 navbar-links:
-  Home: ""
+  Blog: ""
   About me: "https://atuladhar-aman.github.io/"
 
 # --- Footer options --- #
@@ -41,7 +41,7 @@ author:
   github: atuladhar-aman
   twitter: atuladhar_aman
   linkedin: "linkedin"
-  stackoverflow: "stack"
+  stackoverflow: "users/5065092/aman-tuladhar"
  
 # Select which links to show in the footer
 footer-links-active:
@@ -50,7 +50,7 @@ footer-links-active:
   email: true
   twitter: true
   github: true
-  linkedin: true
+  linkedin: false
   stackoverflow: true
 
 # How to display the link to the website in the footer
