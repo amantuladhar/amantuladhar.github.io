@@ -71,6 +71,10 @@ highlighter: rouge
 permalink: /:year-:month-:day-:title/
 paginate: 10
 
+
+# Fill in your Google Analytics ID to track your website using GA
+google_analytics: "UA-85087934-1"
+
 # Default YAML values (more information on Jekyll's site)
 defaults:
   -
@@ -92,3 +96,9 @@ exclude:
   - CNAME
   - LICENSE
   - README.md
+  - Gemfile
+  - Gemfile.lock
+
+gems:
+  - jekyll-sitemap
+  - jekyll-paginate
