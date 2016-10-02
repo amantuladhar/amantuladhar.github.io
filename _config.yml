@@ -60,7 +60,7 @@ url-pretty: "https://atuladhar-aman.github.io/blog/"
 # --- Misc --- #
 
 # Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
-#disqus: ""
+disqus: "devloperblog"
 
 # --- Don't need to touch anything below here (but you can if you want) --- #
 
@@ -69,7 +69,7 @@ timezone: "America/Vancouver"
 markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
-paginate: 5
+paginate: 10
 
 # Default YAML values (more information on Jekyll's site)
 defaults:

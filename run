@@ -1,0 +1,7 @@
+bundle exec jekyll serve || \
+(\
+sudo apt-get update && \
+sudo apt-get install -y ruby ruby-dev ruby-integration&& \
+sudo gem install bundler \
+bundle install \
+)
