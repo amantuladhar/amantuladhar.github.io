@@ -6,7 +6,7 @@
         <h2 class="section-title">SKILLS</h2>
         <!-- /Section title -->
 
-        <div ng-repeat="skill in sc.skills">
+        <div ng-repeat="skill in sc.skills track by $index">
 
             <!-- Subtitle -->
             <h3 class="section-item-title-2">&nbsp;&nbsp; {{skill.title}}</h3>
@@ -15,7 +15,7 @@
             <!-- Skils List -->
             <ul class="skills-list">
                 <!-- item-list -->
-                <li ng-repeat="singleSkill in skill.data">
+                <li ng-repeat="singleSkill in skill.data track by $index">
                     <div class="progress" title="I'm {{singleSkill.level}} at this">
                         <div
                                 ng-init="randomBackgroundColor=sc.bg() ; rangePercentage=sc.percentage(singleSkill.level)"

@@ -1,0 +1,24 @@
+{
+  "name": "atuladhar-aman.github.io",
+  "version": "1.0.0",
+  "description": "Portfolio",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atuladhar-aman/atuladhar-aman.github.io.git"
+  },
+  "author": "Aman Tuladhar",
+  "bugs": {
+    "url": "https://github.com/atuladhar-aman/atuladhar-aman.github.io/issues"
+  },
+  "homepage": "https://github.com/atuladhar-aman/atuladhar-aman.github.io#readme",
+  "cacheDirectories": [
+    "node_modules",
+    "bower_components"
+  ],
+  "devDependencies": {
+    "bower": "1.7.9"
+  },
+  "engines": {
+    "node": "^4.3"
+  }
+}
