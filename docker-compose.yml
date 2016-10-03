@@ -8,4 +8,4 @@ services:
       - .:/app
     ports:
       - 80:4000
-    entrypoint: bundle exec jekyll serve -H 0.0.0.0
+    entrypoint: bundle exec jekyll serve --verbose --trace -H 0.0.0.0

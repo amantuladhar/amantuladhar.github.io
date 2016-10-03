@@ -1,16 +1,23 @@
 @import url("pygment_highlights.css");
 
 /* ---- Custom ---*/
-.big-img.intro-header.feature-post-image {
+.big-img.intro-header.feature-post-image,
+.feature-post-image {
   height: 0%;
-  max-height: 400px;
   padding-top: 30%;
-  margin-bottom: -80px;
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
 }
+.feature-post-image {
+  max-height: 600px;
+  padding-top: 38%;
+}
 
+.big-img.intro-header.feature-post-image {
+  max-height: 400px;
+  margin-bottom: -80px;
+}
 /* --- General --- */
 
 body {
