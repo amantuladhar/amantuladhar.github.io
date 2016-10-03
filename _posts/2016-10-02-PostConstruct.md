@@ -4,7 +4,7 @@ title: PostConstruct Annotation
 subtitle: What and where can we use @PostConstruct
 ---
 
-In this article we will talk about `@PostConstruct`. Let's start with simple example
+WOrld In this article we will talk about `@PostConstruct`. Let's start with simple example
 
 ```java
 @Service

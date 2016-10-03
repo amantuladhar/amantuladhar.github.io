@@ -69,7 +69,7 @@ timezone: "America/Vancouver"
 markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
-paginate: 10
+paginate: 5
 
 
 # Fill in your Google Analytics ID to track your website using GA
