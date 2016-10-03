@@ -98,6 +98,9 @@ exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
+  - Dockerfile
+  - Dockerfile.prod
+  - docker-compose.yml
 
 gems:
   - jekyll-sitemap

@@ -133,7 +133,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  execjs
   github-pages
+  jekyll-paginate
 
 BUNDLED WITH
    1.13.2
