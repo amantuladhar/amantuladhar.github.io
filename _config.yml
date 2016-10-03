@@ -101,6 +101,7 @@ exclude:
   - Dockerfile
   - Dockerfile.prod
   - docker-compose.yml
+  - blog.iml
 
 gems:
   - jekyll-sitemap
