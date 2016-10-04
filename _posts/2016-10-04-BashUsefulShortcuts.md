@@ -4,7 +4,7 @@ title: Bash Shortcuts
 subtitle: Useful shortcuts that we can use on Bash
 ---
 
-Most of us are familier with issuing commands on terminal. But, did you now that bash has set of convinent shortcuts that can make our life a lot more easier.
+Most of us are familier with executing commands on terminal. But, did you now that bash has set of convinent shortcuts that can make our life a lot more easier.
 
 Sometimes when we are typing command and all of sudden we forget to add **sudo**. We can press `CTRL + a` and goto start of command line then type **sudo**
 
