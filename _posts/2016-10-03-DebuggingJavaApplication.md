@@ -1,4 +1,5 @@
 ---
+type: post
 title: Debugging Java Application Running on Docker
 subtitle: Remote Debugging Java Application like a bouss
 bigimg: /img/feature-image/java-docker.png
