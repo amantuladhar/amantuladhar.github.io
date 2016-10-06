@@ -7,7 +7,7 @@ bigimg: /img/feature-image/docker.png
 
 We can run multiple container on our host machine using `Docker`. By default when we run multiple container, one cannot communicate with other. If we want our multiple container to communicate between each other we can use `Docker Network`.
 
-`Docker Network` lets you create a *isolated network* where we can connect our container. Container cannot access external network but if other container are connected to same network they can orchrestrate between each other. To create a network is simple as
+`Docker Network` lets you create a *isolated network* where we can connect our container. Container cannot access external network but if other container are connected to same network they can orchestrate between each other. To create a network is simple as
 
 ```bash
 # docker network create <network_name>
@@ -22,7 +22,7 @@ We can now add the container in the network we just created.
 
 ### 1. Use `--net` when we run our docker
 
-If we want to add our container to network when we execute `docker run` we can use `--net` option which accepts the network name. In order for container to orchestrate  `Docker` uses container name so we can use `--name` option to give name to container.
+If we want to add our container to network when we execute `docker run` we can use `--net` option which accepts the network name. In order for container to orchestrate `Docker` uses container name so we can use `--name` option to give name to container.
 
 ```bash
 docker run -d --net=anetwork --name=mysql -e MYSQL_USER=ROOT -e MYSQL_ALLOW_EMPTY_PASSWORD=yes mysql
