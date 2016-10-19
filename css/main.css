@@ -18,6 +18,11 @@
   max-height: 400px;
   margin-bottom: -80px;
 }
+
+pre code.language-minesmall{
+  font-size: 79%;
+}
+
 /* --- General --- */
 
 body {
