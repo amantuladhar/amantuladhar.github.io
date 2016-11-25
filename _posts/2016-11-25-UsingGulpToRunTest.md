@@ -133,6 +133,113 @@ gulp.task('default', ['test-watch'])
 
 So when you just type `gulp` on termial you will run `test-watch` by default.
 
+This is what my `package.json` looks like
+
+```json
+{
+  "name": "angular-testing",
+  "version": "1.0.0",
+  "description": "Simple Application to learn the how we can unit test AngularJS application",
+  "main": "",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-mocks": "^1.5.8"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.3.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-jasmine": "^1.0.2",
+    "karma-phantomjs-launcher": "^1.0.2"
+  },
+  "scripts": {},
+  "author": "Aman Tuladhar"
+}
+```
+
+and `gulpfile.js`
+
+```javascript
+var gulp = require('gulp');
+var karma = require('karma');
+var Server = karma.Server;
+
+/**
+ * Run test once and exit
+ */
+gulp.task('test', function(done) {
+    new Server(
+        {
+            configFile: __dirname + '/karma.conf.js',
+            singleRun: true
+        },
+        done
+    ).start();
+});
+
+/**
+ * Watch for file changes and re-run tests on each change
+ */
+gulp.task('test-watch', function(done) {
+    new Server(
+        {
+            configFile: __dirname + '/karma.conf.js'
+        },
+        done
+    ).start();
+});
+
+gulp.task('chrome', function(done) {
+    new Server(
+        {
+            configFile: __dirname + '/karma.conf.js',
+            browsers: ['Chrome'],
+            singleRun: true
+        },
+        done
+    ).start();
+});
+
+gulp.task('default', ['test-watch']);
+```
+
+and `karma.conf.js`
+
+```javascript
+
+// Karma configuration
+
+module.exports = function(config) {
+    config.set({
+
+        basePath: '',
+        port: 9876,
+        frameworks: ['jasmine'],
+        autoWatch: true,
+        browsers: ['PhantomJS'],
+        singleRun: false,
+        files: [
+            'node_modules/angular/angular.min.js',
+            'node_modules/angular-mocks/angular-mocks.js',
+            'src/**/*.js',
+            'test/**/*Spec.js'
+        ],
+        exclude: [],
+        logLevel: config.LOG_INFO,
+
+        preprocessors: {},
+        reporters: ['progress'],
+        colors: true,
+        concurrency: Infinity
+    })
+};
+
+```
+
 I'll cover some other topics related to Angular Testing so stay tuned. **`THANKS`**
 
 
