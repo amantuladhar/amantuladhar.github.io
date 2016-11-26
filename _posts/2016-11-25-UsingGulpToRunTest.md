@@ -57,7 +57,7 @@ In above *snippet* We are creating a `gulp` task named *test*. In the task we ar
 To create the new instance of `Karma Server` we are passing some **properties**. We can **Override** properties inside of `karma.conf.js` from here.
 
 1. First properties we are passing is `configFile` which is mandatory properties we need to pass. Which basically holds the path of our `Karma Configuration` file.
-2. Second propoerties is optional. I'm passing this properties to **override** the properties that exist on `karma.conf.js`.
+2. Second properties is optional. I'm passing this properties to **override** the properties that exist on `karma.conf.js`.
 
 We are also passing `done` as second argument to `Server`. If you want to know more about `done` here's the [stackoverflow thread](http://stackoverflow.com/questions/29694425/what-does-gulp-done-method-do).
 
