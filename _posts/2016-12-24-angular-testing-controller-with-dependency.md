@@ -4,10 +4,12 @@ title: Testing Controller (with Dependencies) in AngularJS ( Part 5 )
 subtitle: In this article I'll show you how we can test AngularJS Controller which have any dependencies
 ---
 
-In [Part 4](https://atuladhar-aman.github.io/blog/2016-11-30-angular-testing-controller/) of this series we looked at how we can test AngularJS Controller which doesn't have any dependencies. But in real world
-AngularJS Controller usually dependent on Services. In this post we will look at how we can unit test controller which have dependencies.
-On the way we will explore ways we can use `angular.mock.module(...)`. We will get insight on how `angular.mock.inject()` works. We will
-also see how we can `spyOn` objects.
+In [Part 4](https://atuladhar-aman.github.io/blog/2016-11-30-angular-testing-controller/) of this series we looked at 
+how we can test AngularJS Controller which doesn't have any dependencies. But, in real world,
+AngularJS Controllers usually dependent on Services. In this post we will look, how we can unit test controllers
+which have dependencies.
+On the way, we will explore how we can use `angular.mock.module(...)`. 
+We will get insight on how `angular.mock.inject()` works.
 
 Here's a simple todo app which has has `TodoController` and `TodoService`. `TodoController` is dependent on `TodoService`.
 
@@ -112,7 +114,7 @@ describe('TodoController', function() {
 ```
 
 If you run above test it will run fine. We didn't mock the `TodoService` and we didn't passed `TodoServie` so how is this test working.
-This example shows the angular injector in action. Here injector acts as Service locator.
+This example shows the `angular injector` in action. Here `injector` acts as **Service locator**.
 
 If we want to get hold of `TodoService` we can use `angular.mock.inject(..)` which acts as wrapper for angular injector
 
