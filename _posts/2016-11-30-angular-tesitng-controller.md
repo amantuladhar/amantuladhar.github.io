@@ -4,7 +4,7 @@ title: Testing Controller in AngularJS ( Part 4 )
 subtitle: In this article I'll show you how we can test AngularJS Controller which doesn't have any dependencies
 ---
 
-In [Part 1](https://atuladhar-aman.github.io/blog/2016-11-23-UnitTestingAngular1Part1/) [Part 2](https://atuladhar-aman.github.io/blog/2016-11-24-IntegratingKarmaWithJasmine/) and [Part 3](https://atuladhar-aman.github.io/blog/2016-11-25-UsingGulpToRunTest/) of this article we didn't talk a lot about testing. Those 3 parts were more focused on **configuration** required to do testing.
+In [Part 1](https://atuladhar-aman.github.io/blog/2016-11-23-unit-testing-angular-1-part-1/) [Part 2](https://atuladhar-aman.github.io/blog/2016-11-24-integrate-karma-with-jasmine/) and [Part 3](https://atuladhar-aman.github.io/blog/2016-11-25-using-gulp-to-run-karma/) of this article we didn't talk a lot about testing. Those 3 parts were more focused on **configuration** required to do testing.
 
 In this article I'll show you how we can test simple AngularJS **`Controllers`**.
 
