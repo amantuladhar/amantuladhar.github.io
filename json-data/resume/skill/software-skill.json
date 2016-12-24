@@ -6,7 +6,15 @@
       "level": "Proficient"
     },
     {
+      "title": "Bash And Zsh",
+      "level": "Familiar"
+    },
+    {
       "title": "Sublime",
+      "level": "Familiar"
+    },
+    {
+      "title": "Atom",
       "level": "Familiar"
     },
     {
@@ -32,10 +40,5 @@
     {
       "title": "Windows",
       "level": "Familiar"
-    },
-    {
-      "title": "Bash And Zsh",
-      "level": "Beginner"
     }
   ]
-}
