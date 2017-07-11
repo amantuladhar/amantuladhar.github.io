@@ -286,6 +286,33 @@ ngHtml2JsPreprocessor: {
 
 ---
 
+# Bonus - To run single test on `Karma` using IntelliJ Idea
+
+**STEP 1** Install `Karma` plugin
+
+**STEP 2** Open `karma.conf.js` and you will get the run configuration. Run it.
+<div class='feature-post-image'
+     style="padding-top: 20%; background-image: url('/blog/img/2017-07-11-angularjs-testing-in-nutshell/karma-run-intellij.png');">
+</div>
+
+
+**STEP 3** All the test will run the first time. Then after completion open tab `Karma Server`.
+<div class='feature-post-image'
+     style="padding-top: 20%; background-image: url('/blog/img/2017-07-11-angularjs-testing-in-nutshell/karma-server-intellij.png');">
+</div>
+
+
+**STEP 4** Notice server is still running. Open the terminal and run following command
+`karma run path/to/conf/file/karma.conf.js -- --grep=description`
+
+For example above we use
+`karma run path/to/karma.conf.js -- --grep=helloWorld` because helloWorld is `describe` description.
+
+<div class='feature-post-image'
+     style="padding-top: 20%; background-image: url('/blog/img/2017-07-11-angularjs-testing-in-nutshell/karma-single-test-run-intellij.png');">
+</div>
+
+
 
 
 
