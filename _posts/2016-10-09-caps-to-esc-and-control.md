@@ -1,8 +1,14 @@
 ---
-type: post
-title: Mapping CapsLock to Esc or Control
-subtitle: Changing the behaviour of Caps such that when Caps is clicked it acts as Esc but when click with supporting Letter Acts as Control
+layout: post
+title:  "Mapping CapsLock to Esc or Control"
+date: 2016-10-09
+desc: "Changing the behaviour of Caps such that when Caps is clicked it acts as Esc but when click with supporting Letter"
+keywords: "linux,mac,osx,map,key,capslock,esc,ctrl,control"
+categories: [Misc]
+tags: [Linux, OSX, Keyboard]
+icon: icon-osx
 ---
+
 If you use `VIM` you know pain of pressing `ESC` button. Your pinky finger needs to stretch a lot. In this post I'll try to remove the burden of your pinky finger.I'll show you ways to map your `Caps` as `ESC` when pressed alone but, when pressed with other keys like `a` will it will be registered as `Control`. To make long story short when you press `Caps` you will register `ESC` key and when you press `Caps + a` you will register `Ctrl + a`.
 
 For this to work we are going to use [xcape](https://github.com/alols/xcape)
