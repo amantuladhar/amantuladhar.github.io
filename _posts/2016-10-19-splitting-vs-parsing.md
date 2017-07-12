@@ -1,7 +1,12 @@
 ---
-type: post
-title: Splitting with REGex vs Parsing
-subtitle: Let's see how we can split the Strings with its performance
+layout: post
+title:  "Splitting with REGex vs Parsing"
+date: 2016-10-19
+desc: "Let's see how we can split the Strings with its performance"
+keywords: "java,split,regex,parse,peformance"
+categories: [Java]
+tags: [Java,REGex]
+icon: icon-java
 ---
 
 In this post I'll walk you through a simple scenario where you have to split the CSV file. It's pretty simple with `JAVA` you just need to call the `split(String)` method of String class. If you want to split your string with comma (,) you can pass comma as argument of `split(,)`.
@@ -49,7 +54,7 @@ We can pass a Regex as `split()` argument which can target complex scenario as a
 Here's a method that takes a String as argument and splits it. When you call method below it will ignore the comma that is inside quotes.
 
 
-```minesmall
+```java
 public static List<String> splitRegexBackReference(String field) {
     final String otherThanQuote = " [^\"] ";
     final String quotedString = String.format(" \" %s* \" ", otherThanQuote);
