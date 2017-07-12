@@ -1,7 +1,12 @@
 ---
 layout: post
-title: Testing Controller in AngularJS ( Part 4 )
-subtitle: In this article I'll show you how we can test AngularJS Controller which doesn't have any dependencies
+title:  "Testing Controller in AngularJS"
+date: 2016-11-30
+desc: "In this article I'll show you how we can test AngularJS Controller which doesn't have any dependencies"
+keywords: "js,javascript,jasmine,test,angularjs,karma,controller"
+categories: [Angular]
+tags: [JavaScript,Karma,Jasmine,AngularJS, controller]
+icon: icon-angular
 ---
 
 In [Part 1](https://atuladhar-aman.github.io/blog/2016-11-23-unit-testing-angular-1-part-1/) [Part 2](https://atuladhar-aman.github.io/blog/2016-11-24-integrate-karma-with-jasmine/) and [Part 3](https://atuladhar-aman.github.io/blog/2016-11-25-using-gulp-to-run-karma/) of this article we didn't talk a lot about testing. Those 3 parts were more focused on **configuration** required to do testing.
@@ -10,18 +15,44 @@ In this article I'll show you how we can test simple AngularJS **`Controllers`**
 
 Here's the folder structure that we are going to use.
 
-<div class='feature-post-image'
-     style="padding-top: 35%; background-image: url('/blog/img/2016-11-30-angular-testing-simple-controller/angular-app-structure.png');">
-</div>
-
-
+<img src="{{ site.img_path }}/2016-11-30-angular-testing-simple-controller/angular-app-structure.png" width="40%" style="padding-left: 20%" />
 
 [Here are content of those file if you want to follow along](https://gist.github.com/atuladhar-aman/47a2ad4f53cba8977be3943ec883c3ff)
 
 We are going to write our test on `TodoControllerSpec.js`. Before writing the test let's look at `todo.controller.js`
 
-<script src="https://gist.github.com/atuladhar-aman/29ebf6918e3e76c5a5db964d06e762cd.js"></script>
+```javascript
+(function(angular) {
+    'use strict';
+    angular
+        .module('app')
+        .controller('TodoController', TodoController);
 
+    TodoController.$inject = ['$scope'];
+
+    function TodoController($scope) {
+        $scope.todos = [
+            {'title': 'First Todo', 'done': false}
+        ];
+        $scope.add = add;
+        $scope.clearCompleted = clearCompleted;
+
+        //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+        function add() {
+            $scope.todos.unshift({'title': $scope.newTodo, 'done': false});
+            $scope.newTodo = "";
+        }
+
+        function clearCompleted() {
+            $scope.todos = $scope.todos.filter(function(todo) {
+                return !todo.done;
+            });
+        }
+    }
+
+})(angular);
+```
 
 If you look at above code snippet carefully you can see that the controller has convenience method to `add()` and `clearCompleted()` to add the Todo and Clear the completed Todo.
 

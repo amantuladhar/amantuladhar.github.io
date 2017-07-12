@@ -5,7 +5,7 @@ date: 2016-11-12
 desc: "Let's get familiar with how we test AngularJS application using Jasmine"
 keywords: "js,javascript,jasmine,test,angularjs"
 categories: [Angular]
-tags: [Java,REGex]
+tags: [JavaScript,Karma,Jasmine,AngularJS]
 icon: icon-angular
 ---
 

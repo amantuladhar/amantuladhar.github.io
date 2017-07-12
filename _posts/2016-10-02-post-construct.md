@@ -6,6 +6,7 @@ desc: What and where can we use @PostConstruct
 keywords: "java,postcontruct,spring,autowire"
 categories: [Spring]
 tags: [Java,Spring,PostConstruct,Autowire]
+icon: icon-spring
 ---
 
 In this article we will talk about `@PostConstruct`. Let's start with simple example
