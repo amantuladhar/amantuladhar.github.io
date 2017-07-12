@@ -82,13 +82,13 @@ h5 {
 }
 
 .nav>li.active>a {
-    color: #fff
+    color: #de3838
 }
 
 .navbar-default .nav>li>a:focus,
 .navbar-default .nav>li>a:hover {
     background-color: #293846;
-    color: #fff
+    color: #3385ff
 }
 
 .nav .open>a,
