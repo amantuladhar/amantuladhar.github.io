@@ -85,8 +85,11 @@ h5 {
     color: #de3838
 }
 
+.navbar-default .nav>li>a {
+    color: #18a689;
+}
 .navbar-default .nav>li>a:focus,
-.navbar-default .nav>li>a:hover {
+.navbar-default .nav>li>a {
     background-color: #293846;
     color: #3385ff
 }
@@ -7399,7 +7402,7 @@ body.landing-page {
 .landing-page .navbar-default .navbar-nav>.active>a,
 .landing-page .navbar-default .navbar-nav>.active>a:hover {
     background: 0 0;
-    color: #fff;
+    color: #3385ff;
     border-top: 6px solid #3385FF
 }
 
