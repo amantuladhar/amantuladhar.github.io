@@ -1,5 +1,3 @@
-# Welcome to Jekyll!
-
 # Website settings
 title: Aman Tuladhar
 description: Aman Tuladhar
@@ -8,6 +6,7 @@ baseurl:  # if you have suburl as homepage like '/homepage', please change it to
 url: http://atuladhar-aman.github.io/  # url should be 'http://<github_username>.github.io/homepage' as before
 # url: http://127.0.0.1:4000
 img_path: http://atuladhar-aman.github.io/static/assets/img/blog  # url should be '/homepage/static/assets/img/blog' as before
+
 
 # author -- index page "about me" section
 author:  # change following line to your infomation.
