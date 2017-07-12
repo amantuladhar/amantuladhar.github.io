@@ -2330,7 +2330,7 @@ body.landing-page {
 }
 
 .landing-page .navbar-default .nav li a {
-  color: #fff;
+  color: #e04a4a;
   font-family: 'Open Sans', helvetica, arial, sans-serif;
   font-weight: 700;
   letter-spacing: 1px;
@@ -2345,7 +2345,7 @@ body.landing-page {
 
 .landing-page .navbar-default .navbar-nav>.active>a,.landing-page .navbar-default .navbar-nav>.active>a:hover {
   background: 0 0;
-  color: #fff;
+  color: #3385ff;
   border-top: 6px solid #3385FF;
 }
 
@@ -2356,7 +2356,7 @@ body.landing-page {
 
 .landing-page .navbar-default .navbar-nav>.active>a:focus {
   background: 0 0;
-  color: #fff;
+  color: #3385ff;
 }
 
 .landing-page .navbar-default.navbar-scroll .navbar-nav>.active>a:focus {
