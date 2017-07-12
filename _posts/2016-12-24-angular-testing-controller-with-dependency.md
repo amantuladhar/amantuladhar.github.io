@@ -1,7 +1,12 @@
 ---
 layout: post
-title: Testing Controller (with Dependencies) in AngularJS ( Part 5 )
-subtitle: In this article I'll show you how we can test AngularJS Controller which have any dependencies
+title:  "Testing Controller (with Dependencies) in AngularJS"
+date: 2016-12-24
+desc: "In this article I'll show you how we can test AngularJS Controller which have any dependencies"
+keywords: "js,javascript,jasmine,test,angularjs,karma,controller"
+categories: [Angular]
+tags: [JavaScript,Karma,Jasmine,AngularJS, controller]
+icon: icon-angular
 ---
 
 In [Part 4](https://atuladhar-aman.github.io/blog/2016-11-30-angular-testing-controller/) of this series we looked at 

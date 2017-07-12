@@ -1,7 +1,12 @@
 ---
 layout: post
-title: Getting familiar with spyOn for Angular Testing (Part 6)
-subtitle: Let's look at power of spyOn
+title:  "Getting familiar with spyOn for Angular Testing"
+date: 2016-12-25
+desc: "Let's look at power of spyOn"
+keywords: "js,javascript,jasmine,test,angularjs,spy"
+categories: [Angular]
+tags: [JavaScript,Karma,Jasmine,AngularJS, spy]
+icon: icon-angular
 ---
 
 Now that we know how to do simple testing let's get familiar with `spy` feature of `jasmine`.
