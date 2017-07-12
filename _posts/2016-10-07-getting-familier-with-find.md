@@ -1,7 +1,12 @@
 ---
-type: post
-title: Getting Familier with linux find command
-subtitle: Search and locate files / directories using find command
+layout: post
+title:  "Getting familier with Linux find command"
+date: 2016-10-07
+desc: "Search and locate files/directories using find command"
+keywords: "linux,find,search,command,ubuntu"
+categories: [Linux]
+tags: [Linux,find,search,command,ubuntu]
+icon: icon-shell
 ---
 
 The `find` command is one of the most important and much used command in Linux systems. `find` command is used to search and locate list of files and directories based on conditions you specify for files that match the arguments. In this article we will get familier with linux `find` command.
