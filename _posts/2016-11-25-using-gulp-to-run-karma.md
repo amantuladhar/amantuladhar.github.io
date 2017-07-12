@@ -1,8 +1,12 @@
 ---
 layout: post
-title: Using Gulp to Start Karma ( Part 3 )
-subtitle: Automate the test using GulpJS in headless browser
-bigimg: /img/feature-image/gulpjs.png
+title:  "Using Gulp to Start Karma"
+date: 2016-11-25
+desc: "Automate the test using GulpJS in headless browser"
+keywords: "js,javascript,jasmine,test,angularjs,karma,gulp"
+categories: [Angular]
+tags: [JavaScript,Karma,Jasmine,AngularJS, Gulp]
+icon: icon-angular
 ---
 
 In this article we will use [`Gulp`](http://gulpjs.com/) to run our `Specs`. `Gulp` is a **stream-based** build system with a simple yet powerful API focusing on `code` **over** `configuration`. `Gulp` builds use the `Node.js` streams that do not need to write temporary files or folders to disk, which results in **faster builds**.
