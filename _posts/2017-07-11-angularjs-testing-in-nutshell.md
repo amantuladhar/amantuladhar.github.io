@@ -288,6 +288,9 @@ ngHtml2JsPreprocessor: {
 
 # Bonus - To run single test on `Karma` using IntelliJ Idea
 
+### UPDATE
+If you are using latest update of IntelliJ IDEA and using latest version of Karma plugin you will be able to run the test individually like you run the Java tests.
+
 **STEP 1** Install `Karma` plugin
 
 **STEP 2** Open `karma.conf.js` and you will get the run configuration. Run it.
