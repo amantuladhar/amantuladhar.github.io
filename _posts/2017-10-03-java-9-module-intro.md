@@ -1,12 +1,12 @@
 ---
 layout: post
 title: Introduction to Java 9 Module
-date: 2017-07-11
+date: 2017-10-03
 desc: "Hello World Java 9 Module"
 keywords: "java,java9,module,jigsaw,modulesystem,basics,intro"
 categories: [Java]
 tags: [java,module,jigsaw,java9,module-system]
-icon: icon-angular
+icon: icon-java
 ---
 
 With Java 9 we can use module system called `Jigsaw`. Without talking about module a lot let's dive into modular world of Java.
