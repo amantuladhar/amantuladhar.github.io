@@ -88,7 +88,7 @@ If you look closely it says, `com.moduleone` does not exports it. So let's do th
 
 ## **Make code visible outside module / `exports module.name`**
 We need to add `exports` statement on module declartion file.
-On `com.moduleone` `module-info.java` add `exports com.moduleone;`
+On `com.moduleone` `module-info.java` add `exports com.moduleone;` where `com.modulenone` is package you want to export.
 
 ```java
 module com.moduleone {
