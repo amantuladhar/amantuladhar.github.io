@@ -90,6 +90,7 @@ module com.moduleone{
     requires guava;
 }
 ```
+So we know from above that external jar version numbers are trimmed off. But what if our jar name was like `guava-all.23.0.jar`. We we try to add `requires guava-all` Java compiler will yell at us. So, what Java does is it trims out the version number and if those jars have any dashes (-) it will be converted to dot (.) . So in our scenerio if our jar file was named `guava-all.23.0.jar` we add `requires guava.all;` in our `module-info.java`.
 
 So to run we need to add jar to `--module-path` like we did when we compiled our code.
 ```bash
