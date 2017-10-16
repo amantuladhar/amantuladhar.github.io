@@ -9,7 +9,7 @@ tags: [java,module,jigsaw,java9,module-system,automatic-module,open]
 icon: icon-java
 ---
 
-In previous posts we were exploring how new module system works. 
+We have come a long way to exploring the Java Platform Module System.
 
 [Java 9 Module System Intro](http://atuladhar-aman.github.io/java/2017/10/03/java-9-module-intro.html)
 
@@ -21,9 +21,9 @@ In previous posts we were exploring how new module system works.
 
 [Java 9 Automatic Modules](http://atuladhar-aman.github.io/java/2017/10/09/java-9-automatic-module-with-example.html)
 
-We have come a long way to exploring the new Java Platform Module System. In this post we will look at `open` and `opens` keyword.
+In this post we will look at `open` and `opens` keyword.
 
-To make a long story short, we use `open` and `opens` keyword on `module-info.java` if we want to provide access to our packages to reflection API.
+To make a long story short, we use `open` and `opens` keyword on `module-info.java` file,  if we want to provide reflection API access to module packages.
 
 We will be working with following directory structure. (All files are empty right now)
 
@@ -67,13 +67,13 @@ For now this class is simple, with just one `public` method.
 
 Notice: we haven't used `open` / `opens` yet.
 
-In module `com.user/module-info.java` file we have fairly simple code as well.
+In module `com.user` `module-info.java` file we have fairly simple code as well.
 ```java
 module com.user {
     requires com.exported;
 }
 ```
-If we look at `com.user/com/user/User.java` we have code that uses reflection.
+If we look at `com.user.User.java` we have code that uses reflection.
 ```java
 package com.user;
 
@@ -106,9 +106,10 @@ java --module-path mods -m com.user/com.user.User
 Public : callMe
 ```
 
-Wait!!! Earlier in the post I said that I had to use `open` / `opens` keyword if I want to use reflection API on the code. Why am I able to use reflection now. Of course because this is publicly available exported package.
+### Wait!!! 
+Earlier in the post I said that I had to use `open` / `opens` keyword if I wanted to give reflection API access to modules code. Why am I able to use reflection now then?. Of course because this is **publicly available exported package.**
 
-Let's add some code to twist this example. On `com.exported/com/exported/Exported.java` add one `private` method.
+Let's add some code to twist this example. On `com.exported.Exported.java` add one `private` method.
 
 ```java
 package com.exported;
@@ -122,7 +123,7 @@ public class Exported {
     } 
 }
 ```
-Now on `com.user/com/user/User.java` let's add reflection code to access that method.
+Now on `com.user.User.java` let's add reflection code to access that method.
 ```java
 package com.user;
 
@@ -187,15 +188,15 @@ Public : callMe
 Private : callMePrivate
 ```
 
-We can take this even further. Because we are using reflection to get the public method as well we can remote `exports com.exported` statement from `com.exported/module-info.java`.
+We can take this even further. Because we are using reflection to access the `public` method as well we can remote `exports com.exported` statement from `com.exported/module-info.java`.
 
-We used `opens` keyword and there more to it but before going further on `opens` I want to talk about `open` keyword. So we use `open` keyword when we want to make all of the packages on the module to be accessed by reflection API. Becuase this is for all of the packages we use `open` on module keyword level.
+We used `opens` keyword and there more to it, but before going further on `opens` I want to talk about `open` keyword. So we use `open` keyword when we want to make all of the packages on the module to be accessed by reflection API. Because this is for all of the packages we use `open` on `module` decleration level.
 
 ```java
 open module com.exported {
 }
 ```
-If you compile and run the command now it will run fine. But for the moment let's step back and foucus more on `opens` keyword. You know now that `opens` is used if we want selected package to be accessed by reflection API. But what if you want to give access to only certain packages. Like `exports .. to`, we have `opens .. to` which enables use to give a fine grain access control mechanism even for reflection API. 
+If you compile and run the command now it will run fine. But for the moment let's step back and foucus more on `opens` keyword. You know now that `opens` is used if we want selected package to be accessed by reflection API. But what if you want to give `open` access to only certain packages. Like `exports .. to`, we have `opens .. to` which enables use to give a fine grain access control mechanism even for reflection API. 
 
 Let's see this in action shall we.
 
@@ -220,7 +221,7 @@ module com.usertwo {
 ```
 
 ```java
-package com.user2;
+package com.usertwo;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
