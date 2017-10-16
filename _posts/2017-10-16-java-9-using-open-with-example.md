@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Java 9 open keyword with example
+title: Java open and opens keyword with example
 date: 2017-10-16
-desc: "Java 9 open keyword with example"
+desc: "Java open and opens keyword with example"
 keywords: "java,java9,module,jigsaw,modulesystem,basics,intro,automatic-module,open"
 categories: [Java]
 tags: [java,module,jigsaw,java9,module-system,automatic-module,open]
