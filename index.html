@@ -20,7 +20,11 @@ permalink: /
         <ul class="nav navbar-nav navbar-right" id="i18_navbar">
           {% for section in site.data.landing %}
           <li>
-            <a class="page-scroll" href="#{{ section.id }}">
+            {% if section.id == 'blog' or section.id == 'resume' %}
+              <a class="apage-scroll" href="{{ section.url }}">
+            {% else %}
+              <a class="bpage-scroll" href="#{{ section.id }}">
+            {% endif %}
               <span data-i18n="{{ section.i18n }}">{{ section.name }}</span>
             </a>
           </li>
@@ -38,10 +42,12 @@ permalink: /
   </nav>
 </div>
 {% for section in site.data.landing %}
+{% if section.id != 'resume' and section.id != 'blog' %}
 {% assign loopindex = forloop.index | modulo: 2 %}
 <section id="{{ section.id }}" class="features {% if loopindex != 1 %} gray-section {% endif %} {{ section.css }}" style="margin-top: 0;">
   {% include sections/{{section.tpl}} %}
 </section>
+{% endif %}
 {% endfor %}
 <style>
 iframe {

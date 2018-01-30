@@ -23,12 +23,21 @@
 #   name: Projects
 #   tpl: projects.html
 #   css: project
-
+- id: resume
+  i18n: nav.blog
+  name: Resume
+  tpl: blog.html
+  url: /static/assets/resume
+  css: testimonials navy-section
+  
 - id: blog
   i18n: nav.blog
   name: Blog
   tpl: blog.html
+  url: /blog
   css: testimonials navy-section
+
+
 
 # - id: links
 #   i18n: nav.link
