@@ -2,10 +2,28 @@
   {
     "company": "PointClickCare",
     "title": "Java Developer",
-    "from": "July 2015",
+    "from": "January 2018",
     "to": "Current",
     "description": [
-      "Develop, Maintain and Enhance the Existing Web Application using Java, Spring, Hibernate, Javascript, AngularJs and many more.."
+      "At PointClickCare I was responsible for developing the software that serves the unique need of senior healthcare systems and care providers. I use different programming language like Java, JavaScript and different framework like Spring, Hibernate, AngularJS etc. to develop the software."
+    ]
+  },
+  {
+    "company": "PointClickCare",
+    "title": "Java Developer",
+    "from": "October 2015",
+    "to": "December 2017",
+    "description": [
+      "At PointClickCare I was responsible for developing the software that serves the unique need of senior healthcare systems and care providers. I use different programming language like Java, JavaScript and different framework like Spring, Hibernate, AngularJS etc. to develop the software."
+    ]
+  },
+  {
+    "company": "PointClickCare",
+    "title": "Java Developer (Intern)",
+    "from": "July 2015",
+    "to": "September 2015",
+    "description": [
+      "At PointClickCare I was responsible for developing the software that serves the unique need of senior healthcare systems and care providers. I use different programming language like Java, JavaScript and different framework like Spring, Hibernate, AngularJS etc. to develop the software."
     ]
   },
   {
