@@ -1,0 +1,44 @@
+{
+  "title": "Software Skills",
+  "data": [
+    {
+      "title": "IntelliJ IDEA",
+      "level": "Proficient"
+    },
+    {
+      "title": "Bash And Zsh",
+      "level": "Familiar"
+    },
+    {
+      "title": "Sublime",
+      "level": "Familiar"
+    },
+    {
+      "title": "Atom",
+      "level": "Familiar"
+    },
+    {
+      "title": "Microsoft Office",
+      "level": "Familiar"
+    },
+    {
+      "title": "Smart Git & Source Tree",
+      "level": "Proficient"
+    },
+    {
+      "title": "Linux",
+      "level": "Familiar"
+    },
+    {
+      "title": "SQLyog and MySQL Workbench",
+      "level": "Familiar"
+    },
+    {
+      "title": "Adobe Photoshop",
+      "level": "Beginner"
+    },
+    {
+      "title": "Windows",
+      "level": "Familiar"
+    }
+  ]

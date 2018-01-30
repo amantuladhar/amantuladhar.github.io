@@ -1,0 +1,17 @@
+{
+  "title": "Professional Skill",
+  "data": [
+    {
+      "title": "Communication",
+      "level": "Proficient"
+    },
+    {
+      "title": "Leadership",
+      "level": "Beginner"
+    },
+    {
+      "title": "Confidence",
+      "level": "Familiar"
+    }
+  ]
+}
