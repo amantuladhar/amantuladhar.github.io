@@ -2,40 +2,18 @@
 # if you don't have language feature(language.yml is empty), ignore "i18n" items
 - name:
     detail: PointClickCare Technologies Inc.
-    i18n: PointClickCare
   desc:
-    detail: At PointClickCare I am responsible for developing the software that serves the unique need of senior healthcare systems and care providers. I use different programming language like Java, JavaScript and different framework like Spring, Hibernate, AngularJS etc. to develop the software. 
+    detail: PointClickCare is a leading company to develop a product, specifically catering to Home and Community Based Services. With the knowledge, experience, and training I have had with a company, I am able to devote my technical expertise with business needs to develop a product that is useful and scalable.
   date:
-    detail: January 2018 - Present
+    detail: July 2015 - Current
   job:
     detail: Intermediate Java Developer
   icon: fa-plus-square
 
 - name:
-    detail: PointClickCare Technologies Inc.
-    i18n: PointClickCare
-  desc:
-    detail: At PointClickCare I am responsible for developing the software that serves the unique need of senior healthcare systems and care providers. I use different programming language like Java, JavaScript and different framework like Spring, Hibernate, AngularJS etc. to develop the software. 
-  date:
-    detail: October 2015 - December 2017
-  job:
-    detail: Java Developer
-  icon: fa-plus-square
-
-- name:
-    detail: PointClickCare Technologies Inc.
-  desc:
-    detail: At PointClickCare I was responsible for developing the software that serves the unique need of senior healthcare systems and care providers. I use different programming language like Java, JavaScript and different framework like Spring, Hibernate, AngularJS etc. to develop the software. 
-  date:
-    detail: July 2015 - September 2015 
-  job:
-    detail: Java Developer (Intern)
-  icon: fa-plus-square
-
-- name:
     detail: Smart Data Solutions
   desc:
-    detail: At Smart Data Solutions, I was responsible for developing the software that serves the unique need of senior healthcare systems and care providers. I was also responsible to write a automated test case for the system using Selenium.
+    detail: Smart Data Solutions (SDS) is the United States based corporation who specialize in providing health care payers and networks with front-end medical claims processing services and EDI solutions.
   date:
     detail: March 2015 - June 2015
   job:
