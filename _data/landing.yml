@@ -27,7 +27,7 @@
   i18n: nav.blog
   name: Resume
   tpl: blog.html
-  url: /static/assets/resume
+  url: /static/assets/resume/resume.pdf
   css: testimonials navy-section
   
 - id: blog
