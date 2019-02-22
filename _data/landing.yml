@@ -37,7 +37,12 @@
   url: /blog
   css: testimonials navy-section
 
-
+- id: my_notes
+  i18n: nav.blog
+  name: My Notes
+  url: https://amantuladhar.gitbook.io/mynotes/
+  tpl: blog.html
+  css: testimonials navy-section
 
 # - id: links
 #   i18n: nav.link
