@@ -40,8 +40,8 @@
 - id: my_notes
   i18n: nav.blog
   name: My Notes
-  url: https://amantuladhar.gitbook.io/mynotes/
-  tpl: blog.html
+  url: /mynotes
+  tpl: my_notes.html
   css: testimonials navy-section
 
 # - id: links
