@@ -37,10 +37,12 @@
   url: /blog
   css: testimonials navy-section
 
-- id: my_notes
+- id: mynotes
   i18n: nav.blog
-  name: My Note
+  name: Notes
+  tpl: blog.html
   url: /my_notes.html
+  css: testimonials navy-section
 
 # - id: links
 #   i18n: nav.link
