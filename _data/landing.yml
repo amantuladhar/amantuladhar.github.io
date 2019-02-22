@@ -40,8 +40,7 @@
 - id: my_notes
   i18n: nav.blog
   name: My Note
-  url: /mynotes
-  tpl: my_notes.html
+  url: /my_notes.html
 
 # - id: links
 #   i18n: nav.link
