@@ -39,8 +39,7 @@
 
 - id: my_notes
   i18n: nav.blog
-  name: My Notes
-  url: /mynotes
+  name: My Note
   tpl: my_notes.html
   css: testimonials navy-section
 
