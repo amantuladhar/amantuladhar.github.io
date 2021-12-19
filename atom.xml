@@ -4,7 +4,7 @@
  <title>Random Blogs</title>
  <link href="https://amantuladhar.github.io/atom.xml" rel="self"/>
  <link href="https://amantuladhar.github.io/"/>
- <updated>2021-12-19T00:57:45-05:00</updated>
+ <updated>2021-12-19T01:41:40-05:00</updated>
  <id>https://amantuladhar.github.io</id>
  <author>
    <name>Aman Tuladhar</name>
@@ -2962,7 +2962,7 @@ drwxrwxr-x 2 aman aman 4.0K Oct  7 10:31 somedir
 
 &lt;p&gt;&lt;img src=&quot;/assets/blog/2016-10-04-BashShortcuts/alt-b.gif&quot; width=&quot;40%&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;In above &lt;em&gt;GIF&lt;/em&gt; you can see that cursor is moved back twice. Hmm.. All things looks good now. But &lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WAIT!!!!&lt;/code&gt;&lt;/strong&gt; We want to install &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GIT&lt;/code&gt; before &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;VLC&lt;/code&gt; (consider it as dependency). We need to move cursor foward a word. We can press &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ALT + f&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;In above &lt;em&gt;GIF&lt;/em&gt; you can see that cursor is moved back twice. Hmm. All things looks good now. But &lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WAIT!!!!&lt;/code&gt;&lt;/strong&gt; We want to install &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GIT&lt;/code&gt; before &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;VLC&lt;/code&gt; (consider it as dependency). We need to move cursor foward a word. We can press &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ALT + f&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/blog/2016-10-04-BashShortcuts/alt-f.gif&quot; width=&quot;40%&quot; /&gt;&lt;/p&gt;
 
@@ -2970,7 +2970,7 @@ drwxrwxr-x 2 aman aman 4.0K Oct  7 10:31 somedir
 
 &lt;p&gt;&lt;img src=&quot;/assets/blog/2016-10-04-BashShortcuts/ctrl-k.gif&quot; width=&quot;40%&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Hmm.. now we don’t want to install &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GIT&lt;/code&gt; either. Since your cursor is at end we can use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CTRL + w&lt;/code&gt; to delete just one word before the cursor.&lt;/p&gt;
+&lt;p&gt;Hmm. now we don’t want to install &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GIT&lt;/code&gt; either. Since your cursor is at end we can use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CTRL + w&lt;/code&gt; to delete just one word before the cursor.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/blog/2016-10-04-BashShortcuts/ctrl-w.gif&quot; width=&quot;40%&quot; /&gt;&lt;/p&gt;
 
