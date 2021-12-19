@@ -1,0 +1,20 @@
+<div class="table-of-content-wrapper">
+    <nav role="navigation">
+        <ul class="summary">
+            {% assign reversed_posts = site.posts | reverse %}
+            <li class="table-of-contents-label">Table Of Contents</li>
+            {% for post in reversed_posts %}
+                {% if page.url == post.url %}
+                <li>
+                    <a href="{{site.baseurl}}{{post.url}}">
+                        {{ post.title | escape }}
+                    </a>
+                    {% if site.toc.enabled %}
+                        {% include toc.html html=content h_min=site.toc.h_min h_max=site.toc.h_max %}
+                    {% endif %}
+                </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </nav>
+</div>

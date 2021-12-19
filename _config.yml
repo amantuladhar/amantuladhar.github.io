@@ -31,7 +31,12 @@ markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+  toc_levels: 1..6
 
+toc:
+  enabled: true
+  h_min: 1
+  h_max: 3
 
 exclude:
   - .jekyll-cache
