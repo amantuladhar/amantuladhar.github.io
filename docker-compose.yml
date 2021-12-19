@@ -1,11 +1,11 @@
-version: "2"
+# Compose file to run application locally
+version: '3.1'
 services:
-  github-blog:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    volumes:
-      - .:/app
+  jekyll:
+    build: .
+    working_dir: /project
+    command: 'sh build-and-serve.sh'
     ports:
-      - 80:4000
-    entrypoint: bundle exec jekyll serve --verbose --trace -H 0.0.0.0
+      - "4000:4000"
+    volumes:
+      - "./:/project/"

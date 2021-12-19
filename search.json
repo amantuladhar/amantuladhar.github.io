@@ -1,0 +1,183 @@
+[
+  
+    {
+      "title"    : "Java open and opens keyword with example",
+      "description" : "Java open and opens keyword with example",
+      "category" : "",
+      "tags"     : "java, java9",
+      "url"      : "/2017/10/16/java-9-open-and-opens-keyword-with-example",
+      "date"     : "2017-10-16 00:00:00 -0400"
+    } ,
+  
+    {
+      "title"    : "Java 9 automatic module with example",
+      "description" : "Java 9 automatic module with example",
+      "category" : "",
+      "tags"     : "java, module, jigsaw, java9, module-system, automatic-module, automatic",
+      "url"      : "/2017/10/09/java-9-automatic-module-with-example",
+      "date"     : "2017-10-09 00:00:00 -0400"
+    } ,
+  
+    {
+      "title"    : "Java 9 Transitive Dependency",
+      "description" : "Java 9 Transitive Dependency",
+      "category" : "",
+      "tags"     : "java, module, jigsaw, java9, module-system, exports, requires, transitive",
+      "url"      : "/2017/10/05/java-using-transitive-dependency",
+      "date"     : "2017-10-05 00:00:00 -0400"
+    } ,
+  
+    {
+      "title"    : "Java 9 Using exports with to",
+      "description" : "Java 9 using exports with to",
+      "category" : "",
+      "tags"     : "java, module, jigsaw, java9, module-system, exports, requires",
+      "url"      : "/2017/10/05/java-export-module-to-specific-module-only",
+      "date"     : "2017-10-05 00:00:00 -0400"
+    } ,
+  
+    {
+      "title"    : "Java 9 exports and requires",
+      "description" : "Using Java 9 exports and requires",
+      "category" : "",
+      "tags"     : "java, module, jigsaw, java9, module-system, exports, requires",
+      "url"      : "/2017/10/04/java-9-exports-and-requires",
+      "date"     : "2017-10-04 00:00:00 -0400"
+    } ,
+  
+    {
+      "title"    : "Introduction to Java 9 Module",
+      "description" : "Hello World Java 9 Module",
+      "category" : "",
+      "tags"     : "java, module, jigsaw, java9, module-system",
+      "url"      : "/2017/10/03/java-9-module-intro",
+      "date"     : "2017-10-03 00:00:00 -0400"
+    } ,
+  
+    {
+      "title"    : "AngularJS Testing in Nutshell",
+      "description" : "AngularJS testing as simple as possible",
+      "category" : "",
+      "tags"     : "JavaScript, Karma, Jasmine, AngularJS",
+      "url"      : "/2017/07/11/angularjs-testing-in-nutshell",
+      "date"     : "2017-07-11 00:00:00 -0400"
+    } ,
+  
+    {
+      "title"    : "Getting familiar with spyOn for Angular Testing",
+      "description" : "Let&#39;s look at power of spyOn",
+      "category" : "",
+      "tags"     : "JavaScript, Karma, Jasmine, AngularJS, spy",
+      "url"      : "/2016/12/25/understaing-spy-on-jasmine",
+      "date"     : "2016-12-25 00:00:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Testing Controller (with Dependencies) in AngularJS",
+      "description" : "In this article I&#39;ll show you how we can test AngularJS Controller which have any dependencies",
+      "category" : "",
+      "tags"     : "JavaScript, Karma, Jasmine, AngularJS, controller",
+      "url"      : "/2016/12/24/angular-testing-controller-with-dependency",
+      "date"     : "2016-12-24 00:00:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Testing Controller in AngularJS",
+      "description" : "In this article I&#39;ll show you how we can test AngularJS Controller which doesn&#39;t have any dependencies",
+      "category" : "",
+      "tags"     : "JavaScript, Karma, Jasmine, AngularJS, controller",
+      "url"      : "/2016/11/30/angular-testing-controller",
+      "date"     : "2016-11-30 00:00:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Using Gulp to Start Karma",
+      "description" : "Automate the test using GulpJS in headless browser",
+      "category" : "",
+      "tags"     : "JavaScript, Karma, Jasmine, AngularJS, Gulp",
+      "url"      : "/2016/11/25/using-gulp-to-run-karma",
+      "date"     : "2016-11-25 00:00:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Integrating Karma on AngularJS Testing",
+      "description" : "Let&#39;s Integrate Karma into our Application to run our unit test",
+      "category" : "",
+      "tags"     : "JavaScript, Karma, Jasmine, AngularJS",
+      "url"      : "/2016/11/24/integrate-karma-with-jasmine",
+      "date"     : "2016-11-24 00:00:00 -0500"
+    } ,
+  
+    {
+      "title"    : "AngularJS Testing with Jasmine",
+      "description" : "Let&#39;s get familiar with how we test AngularJS application using Jasmine",
+      "category" : "",
+      "tags"     : "JavaScript, Karma, Jasmine, AngularJS",
+      "url"      : "/2016/11/12/unit-testing-with-jasmine",
+      "date"     : "2016-11-12 00:00:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Splitting with REGex vs Parsing",
+      "description" : "Let&#39;s see how we can split the Strings with its performance",
+      "category" : "",
+      "tags"     : "Java, REGex",
+      "url"      : "/2016/10/19/splitting-vs-parsing",
+      "date"     : "2016-10-19 00:00:00 -0400"
+    } ,
+  
+    {
+      "title"    : "Mapping CapsLock to Esc or Control",
+      "description" : "Changing the behaviour of Caps such that when Caps is clicked it acts as Esc but when click with supporting Letter",
+      "category" : "",
+      "tags"     : "Linux, OSX, Keyboard",
+      "url"      : "/2016/10/09/caps-to-esc-and-control",
+      "date"     : "2016-10-09 00:00:00 -0400"
+    } ,
+  
+    {
+      "title"    : "Docker Network Between Container",
+      "description" : "Creating a network such that two container can communicate",
+      "category" : "",
+      "tags"     : "Docker, Linux, Network",
+      "url"      : "/2016/10/08/docker-network-between-container",
+      "date"     : "2016-10-08 00:00:00 -0400"
+    } ,
+  
+    {
+      "title"    : "Getting familier with Linux find command",
+      "description" : "Search and locate files/directories using find command",
+      "category" : "",
+      "tags"     : "Linux, find, search, command, ubuntu",
+      "url"      : "/2016/10/07/getting-familier-with-find",
+      "date"     : "2016-10-07 00:00:00 -0400"
+    } ,
+  
+    {
+      "title"    : "Bash Shortcuts",
+      "description" : "Useful shortcuts that we can use on Bash",
+      "category" : "",
+      "tags"     : "linux, shell, shortcut, bash, zsh, command",
+      "url"      : "/2016/10/04/bash-useful-shortcuts",
+      "date"     : "2016-10-04 00:00:00 -0400"
+    } ,
+  
+    {
+      "title"    : "Debugging Java Application Running on Docker",
+      "description" : "Remote Debugging Java Application like a boss",
+      "category" : "",
+      "tags"     : "java, debug, docker",
+      "url"      : "/2016/10/03/debugging-java-application",
+      "date"     : "2016-10-03 00:00:00 -0400"
+    } ,
+  
+    {
+      "title"    : "@PostConstruct",
+      "description" : "What and where can we use PostConstruct",
+      "category" : "",
+      "tags"     : "coding, spring",
+      "url"      : "/2016/10/02/post-construct",
+      "date"     : "2016-10-02 00:00:00 -0400"
+    } 
+  
+]
