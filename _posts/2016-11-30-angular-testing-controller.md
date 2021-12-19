@@ -2,7 +2,7 @@
 layout: post
 title:  "Testing Controller in AngularJS"
 date: 2016-11-30
-desc: "In this article I'll show you how we can test AngularJS Controller which doesn't have any dependencies"
+description: "In this article I'll show you how we can test AngularJS Controller which doesn't have any dependencies"
 keywords: "js,javascript,jasmine,test,angularjs,karma,controller"
 categories: [Angular]
 tags: [JavaScript,Karma,Jasmine,AngularJS, controller]
@@ -15,7 +15,7 @@ In this article I'll show you how we can test simple AngularJS **`Controllers`**
 
 Here's the folder structure that we are going to use.
 
-<img src="{{ site.img_path }}/2016-11-30-angular-testing-simple-controller/angular-app-structure.png" width="40%" style="padding-left: 20%" />
+<img src="{{ site.blog_img_path }}/2016-11-30-angular-testing-simple-controller/angular-app-structure.png" width="40%" style="padding-left: 20%" />
 
 [Here are content of those file if you want to follow along](https://gist.github.com/atuladhar-aman/47a2ad4f53cba8977be3943ec883c3ff)
 

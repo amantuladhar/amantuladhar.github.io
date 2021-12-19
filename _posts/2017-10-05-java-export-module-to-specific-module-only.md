@@ -2,7 +2,7 @@
 layout: post
 title: Java 9 Using exports with to
 date: 2017-10-05
-desc: "Java 9 using exports with to"
+description: "Java 9 using exports with to"
 keywords: "java,java9,module,jigsaw,modulesystem,basics,intro,exports,requires"
 categories: [Java]
 tags: [java,module,jigsaw,java9,module-system,exports,requires]

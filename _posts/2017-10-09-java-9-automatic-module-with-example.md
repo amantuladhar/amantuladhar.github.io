@@ -2,7 +2,7 @@
 layout: post
 title: Java 9 automatic module with example
 date: 2017-10-09
-desc: "Java 9 automatic module with example"
+description: "Java 9 automatic module with example"
 keywords: "java,java9,module,jigsaw,modulesystem,basics,intro,automatic-module,automatic"
 categories: [Java]
 tags: [java,module,jigsaw,java9,module-system,automatic-module,automatic]
@@ -11,13 +11,13 @@ icon: icon-java
 
 In previous posts we were exploring how new module system works. 
 
-[Java 9 Module System Intro](http://atuladhar-aman.github.io/java/2017/10/03/java-9-module-intro.html)
+[Java 9 Module System Intro]({% post_url 2017-10-03-java-9-module-intro %})
 
-[Java 9 using exports and requires](http://atuladhar-aman.github.io/java/2017/10/04/java-9-exports-and-requires.html)
+[Java 9 using exports and requires]({% post_url 2017-10-04-java-9-exports-and-requires %})
 
-[Export to specific modules only](http://atuladhar-aman.github.io/java/2017/10/05/java-export-module-to-specific-module-only.html)
+[Export to specific modules only]({% post_url 2017-10-05-java-export-module-to-specific-module-only %})
 
-[Transitive Dependency in Java 9](http://atuladhar-aman.github.io/java/2017/10/05/java-using-transitive-dependency.html)
+[Transitive Dependency in Java 9]({% post_url 2017-10-05-java-using-transitive-dependency %})
 
 But in the real world we will use different **jars** which may or may not be modularized. In this post we will talk about what happens if you want to use **jars** that are not modularized yet.
 

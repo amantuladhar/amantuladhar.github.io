@@ -1,15 +1,14 @@
 ---
 layout: post
-title:  "Debugging Java Application Running on Docker"
-date:   2016-10-03
-desc: "Remote Debugging Java Application like a bouss"
+title: 'Debugging Java Application Running on Docker'
+description: Remote Debugging Java Application like a boss
+summary: Remote Debugging Java Application like a boss
+tags: [java, debug, docker]
 keywords: "Java,Remote Debugging,remote-debugging, debugging"
-categories: [Java]
-tags: [Java,Remote,Debug,Docker]
-icon: icon-java
+minute: 1
 ---
 
-In this post I will explain how you can **debugging Java Application** that is running on **Docker** like a **`bouss`**. To be precise I will explain how we can debug the application that uses `Maven`. I will show you how we can attach our debugger on `IntelliJ Idea`.
+In this post I will explain how you can **debugging Java Application** that is running on **Docker** like a **`boss`**. To be precise I will explain how we can debug the application that uses `Maven`. I will show you how we can attach our debugger on `IntelliJ Idea`.
 
 Let's assume we have a `SpringBoot Application`. To run our application we use `mvn spring-boot:run`. If we were to use `IDE` directly to run our application, we can directly use `debugging` feature provided by `IDE`. But, when we run our application on `Docker` we execute our application with help of `command [mvn spring-boot:run]`.
 
@@ -34,15 +33,13 @@ You can see that we are sending those meta information with help of `-Drun.jvmAr
 
 Open `IntelliJ Idea` and Go to `Edit Coniguration` ( Run > Edit Configuration)
 
-<img src="{{ site.img_path }}/2016-10-03-remote-debugging/01-edit-configuration.png" width="30%" />
+![Edit Configuration PNG]
 
 Click `+` Icon. [Alt + Insert] then Type `remote` and select `Remote`
-
-<img src="{{ site.img_path }}/2016-10-03-remote-debugging/02-select-remote.png" width="30%" />
+![Select Remote PNG]
 
 You will see dialog like below.
-
-<img src="{{ site.img_path }}/2016-10-03-remote-debugging/03-remote-option.png" width="50%" />
+![Remote Option PNG]
 
 From the information you can see that I copied the `Remote Debugging` information from this dialog. If you didn't change any of the option from previous section you are good to go.
 Just a quick note though, on `Host` if you are using `Linux` `'localhost'` will work but, if you are on `Windows / Mac` replace `localhost` with `IP Docker Machine` is running on. Before you click Debug make sure you already executed your application with *meta information*.
@@ -50,10 +47,19 @@ If you change the `address` option when you added *meta information* just replac
 
 You should be able to debug your application. If you were stuck on some step please comment below.
 
-### Some referrences
+### Some references
 
 - [Remote Debugging Maven Spring Boot]
 - [Remote Debugging Options]
+
+[Edit Configuration PNG]: {{ site.blog_img_path }}/2016-10-03-remote-debugging/01-edit-configuration.png
+{: height="200px" width="500px"}
+
+[Select Remote PNG]: {{ site.blog_img_path }}/2016-10-03-remote-debugging/02-select-remote.png
+{: height="200px" width="500px"}
+
+[Remote Option PNG]: {{ site.blog_img_path }}/2016-10-03-remote-debugging/03-remote-option.png
+{: height="200px" width="500px"}
 
 [Remote Debugging Options]: <http://stackoverflow.com/questions/138511/what-are-java-command-line-options-to-set-to-allow-jvm-to-be-remotely-debugged>
 [Remote Debugging Maven Spring Boot]: <http://stackoverflow.com/questions/39469438/how-to-execute-spring-bootrun-from-terminal-for-remote-debugging>

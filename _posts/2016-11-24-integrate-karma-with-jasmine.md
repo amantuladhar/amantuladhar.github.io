@@ -2,7 +2,7 @@
 layout: post
 title:  "Integrating Karma on AngularJS Testing"
 date: 2016-11-24
-desc: "Let's Integrate Karma into our Application to run our unit test"
+description: "Let's Integrate Karma into our Application to run our unit test"
 keywords: "js,javascript,jasmine,test,angularjs,karma"
 categories: [Angular]
 tags: [JavaScript,Karma,Jasmine,AngularJS]
@@ -169,7 +169,7 @@ Of course if you didn't install `Karma` globally you can run
 ./node_modules/.bin/karma start
 ```
 
-<img src="{{ site.img_path }}/2016-11-24-Karma-Integration-Part2/Karma-Run-Test-001.png" width="70%" style="padding-left: 20%" />
+<img src="{{ site.blog_img_path }}/2016-11-24-Karma-Integration-Part2/Karma-Run-Test-001.png" width="70%" style="padding-left: 20%" />
 
 Well, in this article you learned about `Karma` and how we can use `Karma` to run our unit test. I'll cover some other topics related to Angular Testing so stay tuned.
 

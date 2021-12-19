@@ -2,7 +2,7 @@
 layout: post
 title:  "Getting familier with Linux find command"
 date: 2016-10-07
-desc: "Search and locate files/directories using find command"
+description: "Search and locate files/directories using find command"
 keywords: "linux,find,search,command,ubuntu"
 categories: [Linux]
 tags: [Linux,find,search,command,ubuntu]

@@ -2,7 +2,7 @@
 layout: post
 title: Java 9 exports and requires
 date: 2017-10-04
-desc: "Using Java 9 exports and requires"
+description: "Using Java 9 exports and requires"
 keywords: "java,java9,module,jigsaw,modulesystem,basics,intro,exports,requires"
 categories: [Java]
 tags: [java,module,jigsaw,java9,module-system,exports,requires]

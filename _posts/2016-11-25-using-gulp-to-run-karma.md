@@ -2,7 +2,7 @@
 layout: post
 title:  "Using Gulp to Start Karma"
 date: 2016-11-25
-desc: "Automate the test using GulpJS in headless browser"
+description: "Automate the test using GulpJS in headless browser"
 keywords: "js,javascript,jasmine,test,angularjs,karma,gulp"
 categories: [Angular]
 tags: [JavaScript,Karma,Jasmine,AngularJS, Gulp]

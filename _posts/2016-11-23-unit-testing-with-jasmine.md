@@ -2,7 +2,7 @@
 layout: post
 title:  "AngularJS Testing with Jasmine"
 date: 2016-11-12
-desc: "Let's get familiar with how we test AngularJS application using Jasmine"
+description: "Let's get familiar with how we test AngularJS application using Jasmine"
 keywords: "js,javascript,jasmine,test,angularjs"
 categories: [Angular]
 tags: [JavaScript,Karma,Jasmine,AngularJS]
@@ -172,6 +172,6 @@ describe('This is description for test suite', function() {
 
 Open `test/SpecRunner.html` on any browser and you can see the Test result
 
-<img src="{{ site.img_path }}/2016-11-20-AngularJsTestingJasminePart1/jasmine-test-001.png" width="70%" style="padding-left: 20%" />
+<img src="{{ site.blog_img_path }}/2016-11-20-AngularJsTestingJasminePart1/jasmine-test-001.png" width="70%" style="padding-left: 20%" />
 
 Let's wrap up this article and In Part 2 i'll show you how we can integrate `Karma` with `Jasmine` and `AngularJS`.

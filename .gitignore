@@ -1,38 +1,11 @@
-######################
-# Intellij
-######################
-.idea/**
-*.iml
-
-
-_site/
-
-######################
-# Node
-######################
-/node/**
-/node_tmp/**
-/node_modules/**
-
-
-######################
-# Windows
-######################
-# Windows image file caches
-Thumbs.db
-
-# Folder config file
-Desktop.ini
-
-######################
-# Mac OSX
-######################
+tmp
+*.rdb
+.env
+.sass-cache
 .DS_Store
-.svn
-
-# Thumbnails
-._*
-
-# Files that might appear on external disk
-.Spotlight-V100
-.Trashes
+_site
+.jekyll-cache
+.git
+.vscode
+.obsidian
+.idea/

@@ -2,7 +2,7 @@
 layout: post
 title:  "Docker Network Between Container"
 date: 2016-10-08
-desc: "Creating a network such that two container can communicate"
+description: "Creating a network such that two container can communicate"
 keywords: "linux,docker,container,network"
 categories: [Misc]
 tags: [Docker,Linux,Network]
@@ -47,7 +47,7 @@ To check if we can communicate with `mysql` we can use `ping` command
 ping mysql
 ```
 
-<img src="{{ site.img_path }}/2016-10-08-DockerNetworkBetweenContainer/docker-network.gif" width="50%" />
+<img src="{{ site.blog_img_path }}/2016-10-08-DockerNetworkBetweenContainer/docker-network.gif" width="80%" />
 
 ----
 
@@ -75,6 +75,6 @@ docker network connect anetwork mysql
 docker network connect anetwork pythonapp
 ```
 
-<img src="{{ site.img_path }}/2016-10-08-DockerNetworkBetweenContainer/docker-network-connect.gif" width="50%" />
+<img src="{{ site.blog_img_path }}/2016-10-08-DockerNetworkBetweenContainer/docker-network-connect.gif" width="80%" />
 
 That's it, now two container can communicate with each other.

@@ -1,12 +1,10 @@
 ---
 layout: post
-title: PostConstruct Annotation
-date: 2016-10-02
-desc: What and where can we use @PostConstruct
-keywords: "java,postcontruct,spring,autowire"
-categories: [Spring]
-tags: [Java,Spring,PostConstruct,Autowire]
-icon: icon-spring
+title: '@PostConstruct'
+description: What and where can we use PostConstruct
+summary: What and where can we use PostConstruct
+tags: [coding, spring]
+minute: 1
 ---
 
 In this article we will talk about `@PostConstruct`. Let's start with simple example

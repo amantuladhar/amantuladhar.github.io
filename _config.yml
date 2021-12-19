@@ -1,66 +1,87 @@
-# Website settings
-title: Aman Tuladhar
-description: Aman Tuladhar
-keywords: Aman, AmanTuladhar, blog, Tuladhar, Developer, Devloper, Java, Scala, Python, JavaScript, AngularJS
-baseurl:  # if you have suburl as homepage like '/homepage', please change it to '/homepage' and your repo's name should be 'homepage'
-url: http://amantuladhar.github.io/  # url should be 'http://<github_username>.github.io/homepage' as before
-# url: http://127.0.0.1:4000
-img_path: /static/assets/img/blog  # url should be '/homepage/static/assets/img/blog' as before
+site: Gesko
+title: Random Blogs
+greetings: Hi 👋
+description: >-
+  personal blog
+lang: en-US
+timezone: America/New_York
+repo: https://github.com/amantuladhar # site repo [optional]
+data-theme: dark # default theme "dark" | "light"
+discus-identifier: a0on # replace with your disqus shortname
+blog_img_path: /assets/blog
 
+author:
+  name: Aman Tuladhar
+  bio: personal blog
+  userpicture:
+  username: # general username
+  github: # github username
+  twitter: # twitter username
+  email: your-email@email.com # email adress
 
-# author -- index page "about me" section
-author:  # change following line to your infomation.
-  name: Aman Tuladhar  # Be used at blog posts' author.
-  first_name: Aman # Be used at index page about me section.
-  last_name: Tuladhar # Be used at index page about me section.
-  avatar: /static/assets/img/landing/avatar.jpg  # upload your avatar at directory and edit it.
-  github_username: amantuladhar # Leave blank if you don't have now
-  linkedin_id: amantuladhar # Leave blank if you don't have now
-  facebook_username: atuladhar.aman # Leave blank if you don't have now
-  twitter_username: atuladhar_aman # Leave blank if you don't have now
-  email: atuladhar.aman@gmail.com # Leave blank if you don't have now
-  cv:  # A online CV can be printed as PDF, leave blank if you don't have now
-  # skill icons are on avatar's left and right side. Reference urls are http://fontawesome.io/ and http://fizzed.com/oss/font-mfizz
-  skill_icon1:
-    - name: icon-java-bold
-    - name: icon-javascript-alt
-    - name: icon-python
-    - name: icon-scala-alt
-  skill_icon2:
-    - name: icon-spring
-    - name: icon-angular
-    - name: icon-shell
-    - name: icon-gradle
-  desc: I love technology and try new stuffs.  # Describe yourself.
+# Font Settings
+googlewebfonts: family=Play:wght@400;700&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,500;1,600;1,700;1,900
 
-# comment
-# disqus:  # if you wanna comment feature, go to https://disqus.com/ to get your configuration; if not, comment following two lines.
-  # name: devloperblog
-  # public_key: tj2MPaNlHMONwTH5bGDNSXyaBpW7q282MeUzh5CwcjJerNhK8Kxk3aWo7IckzTX7
+# URL settings
+url: "https://amantuladhar.github.io" # Domain Name of host. [username].github.io for github pages
+baseurl: "" # sub folder for jekyll site. only if jekyll site not in root of host. leave blank if not wishd. always add / in front.
+permalink: pretty
 
-# analytics
-## google analytics
-ga:  # if you wanna this feature, go to https://www.google.com/analytics/ to get your configuration; if not, comment following line.
-  id: UA-85087934-1
-
-## google optimize
-go:
-  # id:
-
-## growingIO
-gio:  # if you wanna this feature, go to https://www.growingio.com/ to get your configuration; if not, comment following line.
-  # id:
-
-## donation
-donation: off  # type 'on'/'off' to choice display donation button at post page or not
-
-
-# Build settings
-encoding: utf-8
-
-# other settings
-highlighter: rouge
 markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+
+
+exclude:
+  - .jekyll-cache
+  - .obsidian
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE.md
+  - README.md
+  - CONTRIBUTING.md
+  - .idea
+
+compress_html:
+  clippings: all
+  comments: [ "<!-- ", " -->" ]
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-relative-links
+
+collections:
+  pages:
+    output: true
+    permalink: /:name
+  posts:
+    output: true
+    permalink: /:year/:month/:day/:slug
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+relative_links:
+  enabled: true
+  collections: false
+
+

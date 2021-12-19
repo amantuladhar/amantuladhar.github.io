@@ -2,7 +2,7 @@
 layout: post
 title:  "AngularJS Testing in Nutshell"
 date: 2017-07-11
-desc: "AngularJS testing as simple as possible"
+description: "AngularJS testing as simple as possible"
 keywords: "js,javascript,jasmine,test,angularjs"
 categories: [Angular]
 tags: [JavaScript,Karma,Jasmine,AngularJS]
@@ -300,10 +300,10 @@ If you update your IntelliJ IDEA and Karma plugin to latest version you can run 
 **STEP 1** Install `Karma` plugin
 
 **STEP 2** Open `karma.conf.js` and you will get the run configuration. Run it.
-<img src="{{ site.img_path }}/2017-07-11-angularjs-testing-in-nutshell/karma-run-intellij.png" width="30%" />
+<img src="{{ site.blog_img_path }}/2017-07-11-angularjs-testing-in-nutshell/karma-run-intellij.png" width="30%" />
 
 **STEP 3** All the test will run the first time. Then after completion open tab `Karma Server`.
-<img src="{{ site.img_path }}/2017-07-11-angularjs-testing-in-nutshell/karma-server-intellij.png" width="30%" />
+<img src="{{ site.blog_img_path }}/2017-07-11-angularjs-testing-in-nutshell/karma-server-intellij.png" width="30%" />
 
 **STEP 4** Notice server is still running. Open the terminal and run following command
 `karma run path/to/conf/file/karma.conf.js -- --grep=description`
@@ -311,7 +311,7 @@ If you update your IntelliJ IDEA and Karma plugin to latest version you can run 
 For example above we use
 `karma run path/to/karma.conf.js -- --grep=helloWorld` because helloWorld is `describe` description.
 
-<img src="{{ site.img_path }}/2017-07-11-angularjs-testing-in-nutshell/karma-single-test-run-intellij.png" width="30%" />
+<img src="{{ site.blog_img_path }}/2017-07-11-angularjs-testing-in-nutshell/karma-single-test-run-intellij.png" width="30%" />
 
 
 

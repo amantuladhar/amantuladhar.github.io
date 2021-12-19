@@ -2,7 +2,7 @@
 layout: post
 title:  "Testing Controller (with Dependencies) in AngularJS"
 date: 2016-12-24
-desc: "In this article I'll show you how we can test AngularJS Controller which have any dependencies"
+description: "In this article I'll show you how we can test AngularJS Controller which have any dependencies"
 keywords: "js,javascript,jasmine,test,angularjs,karma,controller"
 categories: [Angular]
 tags: [JavaScript,Karma,Jasmine,AngularJS, controller]

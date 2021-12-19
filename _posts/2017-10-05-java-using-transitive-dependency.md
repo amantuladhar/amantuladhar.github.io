@@ -2,7 +2,7 @@
 layout: post
 title: Java 9 Transitive Dependency
 date: 2017-10-05
-desc: "Java 9 Transitive Dependency"
+description: "Java 9 Transitive Dependency"
 keywords: "java,java9,module,jigsaw,modulesystem,basics,intro,exports,requires,transitive"
 categories: [Java]
 tags: [java,module,jigsaw,java9,module-system,exports,requires,transitive]

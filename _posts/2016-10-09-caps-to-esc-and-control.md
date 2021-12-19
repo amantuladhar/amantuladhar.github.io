@@ -2,7 +2,7 @@
 layout: post
 title:  "Mapping CapsLock to Esc or Control"
 date: 2016-10-09
-desc: "Changing the behaviour of Caps such that when Caps is clicked it acts as Esc but when click with supporting Letter"
+description: "Changing the behaviour of Caps such that when Caps is clicked it acts as Esc but when click with supporting Letter"
 keywords: "linux,mac,osx,map,key,capslock,esc,ctrl,control"
 categories: [Misc]
 tags: [Linux, OSX, Keyboard]

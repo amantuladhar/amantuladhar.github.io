@@ -2,7 +2,7 @@
 layout: post
 title:  "Splitting with REGex vs Parsing"
 date: 2016-10-19
-desc: "Let's see how we can split the Strings with its performance"
+description: "Let's see how we can split the Strings with its performance"
 keywords: "java,split,regex,parse,peformance"
 categories: [Java]
 tags: [Java,REGex]

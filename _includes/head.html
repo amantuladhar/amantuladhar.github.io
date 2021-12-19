@@ -1,93 +1,47 @@
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  {% if page.desc %}
-    <meta content="{{ page.desc }}" name="description">
-  {% endif %}
-  {% if page.keywords %}
-    <meta name="keywords" content="{{ page.keywords }}">
-  {% endif %}
-  <meta name="author" content="{{ site.author.name }}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/assets/css/syntax.css">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <title>
-    {% if page.title != "index" %}
-        {{ site.title }}|{{ page.title }}
-    {% else %}
-        {{ site.title }}
-    {% endif %}
-  </title>
-  <!-- favicon -->
-  <link rel="shortcut icon" href="{{ "/static/assets/img/favicon.png" | prepend: site.baseurl }}">
+      {% if page.tag or page.title %}
+        {% if page.tag %}
+          {{ page.tag | escape }}
+        {% else %}
+          {{ page.title | escape }}
+        {% endif %}
+        -
+      {% endif %}
+      {% if paginator and paginator.page and paginator.total_pages > 1 and paginator.page > 1 %}
+        Page {{ paginator.page }} of {{ paginator.total_pages }} -
+      {% endif %}
+      {{ site.title | escape }}
+      {% unless page.tag or page.title %}
+        - {{ site.description | escape }}
+      {% endunless %}
+    </title>
+  
+  
 
-  <!-- Main CSS -->
-  <link href="{{ "/static/assets/app-20170606.min.css" | prepend: site.baseurl }}" rel="stylesheet">
+  
+    <link rel="shortcut icon" href="{{ site.url }}{{ site.baseurl }}/favicon.png">
+    <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ site.url }}{{ site.baseurl }}/atom.xml">
+    <link rel="alternate" type="application/json" title="{{ site.title }}" href="{{ site.url }}{{ site.baseurl }}/feed.json" />
+    <link rel="sitemap" type="application/xml" title="sitemap" href="{{ site.url }}{{ site.baseurl }}/sitemap.xml" />
+      
+  {% if site.googlewebfonts %}
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?{{ site.googlewebfonts }}&display=swap" rel="stylesheet">
+  {% endif %}
 
-  <!-- Main Scripts -->
-  <script src="{{"/static/assets/app-20170606.min.js"| prepend: site.baseurl }}"></script>
+  <style>
+    {% capture include_to_scssify %}
+      {% include inline.scss %}
+    {% endcapture %}
+    {{ include_to_scssify | scssify }}
+  </style>
 
-  <script type="text/javascript">
-    $(document).ready(function () {
-      var initial = 0;
-      var show = true;
-
-      var toggleSearch = function (visible) {
-        initial = 0;
-        show = !visible;
-        var visibility = visible ? 'block' : 'none';
-
-        $("#search-content").val("");
-        $(".search-tool").css("display", visibility);
-      };
-
-      var shouldToggle = function (time) {
-        var gap = time - initial;
-        initial = time;
-        return gap < 500;
-      };
-
-      $(document).keyup(function (e) {
-        var now = new Date().getTime();
-        if (e.keyCode == 17 && shouldToggle(now)) {
-          toggleSearch(show);
-        } else if (e.keyCode == 27) {
-          toggleSearch(false);
-        }
-      });
-
-      $("#search-content").keyup(function (e) {
-        var now = new Date().getTime();
-        if (e.keyCode == 17 && shouldToggle(now)) {
-          toggleSearch(show);
-        }
-      });
-
-      $("#close-btn").click(function () {
-        toggleSearch(false);
-      });
-
-      $("#search-btn").click(function() {
-        toggleSearch(true);
-      });
-
-      $.getJSON("{{ "/search/cb-search.json" | prepend: site.baseurl }}")
-        .done(function (data) {
-          if (data.code == 0) {
-            $("#search-content").typeahead({
-              source: data.data,
-              displayText: function (item) {
-                return item.title;
-              },
-              afterSelect: function (item) {
-                window.location.href = item.url;
-              }
-            });
-          }
-        });
-    });
-    $(function(){
-        $("pre").css('display','block');
-    });
-  </script>
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>

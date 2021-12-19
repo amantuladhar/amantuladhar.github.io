@@ -1,0 +1,11 @@
+# Compose file to run application locally
+version: '3.1'
+services:
+  jekyll:
+    build: .
+    working_dir: /project
+    command: 'sh build-and-serve.sh'
+    ports:
+      - "4000:4000"
+    volumes:
+      - "./:/project/"
