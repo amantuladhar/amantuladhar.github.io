@@ -1,7 +1,8 @@
 ---
-layout: post title: Java open and opens keyword with example date: 2017-10-16 description: "Java open and opens keyword
-with example"
-tags: [java,java9]
+layout: post 
+title: Java open and opens keyword with example 
+description: "Java open and opens keyword with example"
+tags: [java, java9]
 ---
 
 We have come a long way to exploring the Java Platform Module System.
