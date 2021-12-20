@@ -5,7 +5,7 @@ date: 2017-10-05
 description: "Java 9 Transitive Dependency"
 keywords: "java,java9,module,jigsaw,modulesystem,basics,intro,exports,requires,transitive"
 categories: [Java]
-tags: [java,module,jigsaw,java9,module-system,exports,requires,transitive]
+tags: java
 icon: icon-java
 ---
 

@@ -2,7 +2,7 @@
 layout: post 
 title: Java open and opens keyword with example 
 description: "Java open and opens keyword with example"
-tags: [java, java9]
+tags: java
 ---
 
 We have come a long way to exploring the Java Platform Module System.

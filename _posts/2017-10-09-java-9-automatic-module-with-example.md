@@ -5,7 +5,7 @@ date: 2017-10-09
 description: "Java 9 automatic module with example"
 keywords: "java,java9,module,jigsaw,modulesystem,basics,intro,automatic-module,automatic"
 categories: [Java]
-tags: [java,module,jigsaw,java9,module-system,automatic-module,automatic]
+tags: java
 icon: icon-java
 ---
 
