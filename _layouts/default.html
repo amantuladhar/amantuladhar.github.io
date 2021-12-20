@@ -69,8 +69,8 @@ layout: compress
   </div>
 </footer>
 
-
-{% if page.url == '/' %}
+{% assign firstRouteName = page.url | slice: 1, 4 %}
+{% if page.url == '/' or firstRouteName == 'page' %}
   <script src="{{ site.url }}{{ site.baseurl }}/assets/js/simple-jekyll-search.js"></script>
   <script>
     var sjs = SimpleJekyllSearch({
