@@ -4,7 +4,7 @@
       "title"    : "Java open and opens keyword with example",
       "description" : "Java open and opens keyword with example",
       "category" : "",
-      "tags"     : "java, java9",
+      "tags"     : "java",
       "url"      : "/2017/10/16/java-9-open-and-opens-keyword-with-example",
       "date"     : "2017-10-16 00:00:00 -0400"
     } ,
@@ -13,7 +13,7 @@
       "title"    : "Java 9 automatic module with example",
       "description" : "Java 9 automatic module with example",
       "category" : "",
-      "tags"     : "java, module, jigsaw, java9, module-system, automatic-module, automatic",
+      "tags"     : "java",
       "url"      : "/2017/10/09/java-9-automatic-module-with-example",
       "date"     : "2017-10-09 00:00:00 -0400"
     } ,
@@ -22,7 +22,7 @@
       "title"    : "Java 9 Transitive Dependency",
       "description" : "Java 9 Transitive Dependency",
       "category" : "",
-      "tags"     : "java, module, jigsaw, java9, module-system, exports, requires, transitive",
+      "tags"     : "java",
       "url"      : "/2017/10/05/java-using-transitive-dependency",
       "date"     : "2017-10-05 00:00:00 -0400"
     } ,

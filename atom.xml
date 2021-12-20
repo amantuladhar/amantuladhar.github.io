@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
- <title>Random Blogs</title>
+ <title>Aman</title>
  <link href="https://amantuladhar.github.io/atom.xml" rel="self"/>
  <link href="https://amantuladhar.github.io/"/>
- <updated>2021-12-19T23:28:14-05:00</updated>
+ <updated>2021-12-20T00:20:30-05:00</updated>
  <id>https://amantuladhar.github.io</id>
  <author>
    <name>Aman Tuladhar</name>

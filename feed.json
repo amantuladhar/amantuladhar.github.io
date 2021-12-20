@@ -1,6 +1,6 @@
 {
     "version": "https://jsonfeed.org/version/1",
-    "title": "Random Blogs",
+    "title": "Aman",
     "home_page_url": "https://amantuladhar.github.io/",
     "feed_url": "https://amantuladhar.github.io/feed.json",
     "description": "personal blog",
@@ -26,7 +26,7 @@
             
             
             
-            "tags": ["java","java9"],
+            
             
             "date_published": "2017-10-16T00:00:00-04:00",
             "date_modified": "2017-10-16T00:00:00-04:00",
@@ -50,7 +50,7 @@
             
             
             
-            "tags": ["java","module","jigsaw","java9","module-system","automatic-module","automatic"],
+            
             
             "date_published": "2017-10-09T00:00:00-04:00",
             "date_modified": "2017-10-09T00:00:00-04:00",
@@ -74,7 +74,7 @@
             
             
             
-            "tags": ["java","module","jigsaw","java9","module-system","exports","requires","transitive"],
+            
             
             "date_published": "2017-10-05T00:00:00-04:00",
             "date_modified": "2017-10-05T00:00:00-04:00",
