@@ -3,12 +3,12 @@ layout: post
 title: "Bash Shortcuts"
 description: Useful shortcuts that we can use on Bash
 summary: Useful shortcuts that we can use on Bash
-tags: [linux, shell, shortcut, bash, zsh, command]
+tags: linux shell
 ---
 
-Most of us are familier with executing commands on terminal. But, did you now that bash has set of convinent shortcuts that can make our life a lot more easier.
+Most of us are familiar with executing commands on terminal. But, did you now that bash has set of convinent shortcuts that can make our life a lot more easier.
 
-Sometimes when we are typing command and all of sudden we forget to add **sudo**. We can press `CTRL + a` and goto start of command line then type **sudo**
+Sometimes when we are typing command and all of a sudden we forget to add **sudo**. We can press `CTRL + a` and goto start of command line then type **sudo**
 
 <img src="{{ site.blog_img_path }}/2016-10-04-BashShortcuts/ctrl-a.gif" width="40%" />
 

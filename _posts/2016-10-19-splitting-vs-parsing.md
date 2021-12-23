@@ -1,12 +1,9 @@
 ---
 layout: post
 title:  "Splitting with REGex vs Parsing"
-date: 2016-10-19
 description: "Let's see how we can split the Strings with its performance"
-keywords: "java,split,regex,parse,peformance"
-categories: [Java]
-tags: [Java,REGex]
-icon: icon-java
+keywords: "java,split,regex,parse,performance"
+tags: java
 ---
 
 In this post I'll walk you through a simple scenario where you have to split the CSV file. It's pretty simple with `JAVA` you just need to call the `split(String)` method of String class. If you want to split your string with comma (,) you can pass comma as argument of `split(,)`.

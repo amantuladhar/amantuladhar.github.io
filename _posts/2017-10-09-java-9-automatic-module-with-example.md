@@ -1,12 +1,9 @@
 ---
 layout: post
 title: Java 9 automatic module with example
-date: 2017-10-09
 description: "Java 9 automatic module with example"
 keywords: "java,java9,module,jigsaw,modulesystem,basics,intro,automatic-module,automatic"
-categories: [Java]
 tags: java
-icon: icon-java
 ---
 
 In previous posts we were exploring how new module system works. 

@@ -3,7 +3,7 @@ layout: post
 title: 'Debugging Java Application Running on Docker'
 description: Remote Debugging Java Application like a boss
 summary: Remote Debugging Java Application like a boss
-tags: [java, debug, docker]
+tags: java docker
 keywords: "Java,Remote Debugging,remote-debugging, debugging"
 minute: 1
 ---

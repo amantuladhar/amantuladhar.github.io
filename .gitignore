@@ -9,3 +9,4 @@ _site
 .vscode
 .obsidian
 .idea/
+*.iml

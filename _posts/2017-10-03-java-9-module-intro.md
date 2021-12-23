@@ -1,11 +1,9 @@
 ---
 layout: post
 title: Introduction to Java 9 Module
-date: 2017-10-03
 description: "Hello World Java 9 Module"
 keywords: "java,java9,module,jigsaw,modulesystem,basics,intro"
-categories: [Java]
-tags: [java,module,jigsaw,java9,module-system]
+tags: java
 icon: icon-java
 ---
 

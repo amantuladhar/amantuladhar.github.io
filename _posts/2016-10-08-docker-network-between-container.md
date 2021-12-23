@@ -1,12 +1,9 @@
 ---
 layout: post
 title:  "Docker Network Between Container"
-date: 2016-10-08
 description: "Creating a network such that two container can communicate"
 keywords: "linux,docker,container,network"
-categories: [Misc]
-tags: [Docker,Linux,Network]
-icon: icon-docker
+tags: docker
 ---
 
 We can run multiple container on our host machine using `Docker`. By default when we run multiple container, one cannot communicate with other. If we want our multiple container to communicate between each other we can use `Docker Network`.

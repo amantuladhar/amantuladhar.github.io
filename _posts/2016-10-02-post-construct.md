@@ -3,7 +3,7 @@ layout: post
 title: '@PostConstruct'
 description: What and where can we use PostConstruct
 summary: What and where can we use PostConstruct
-tags: [coding, spring]
+tags: spring-boot spring java
 minute: 1
 ---
 

@@ -1,12 +1,9 @@
 ---
 layout: post
 title:  "AngularJS Testing in Nutshell"
-date: 2017-07-11
 description: "AngularJS testing as simple as possible"
 keywords: "js,javascript,jasmine,test,angularjs"
-categories: [Angular]
-tags: [JavaScript,Karma,Jasmine,AngularJS]
-icon: icon-angular
+tags: javascript angular
 ---
 
 In this post I will talk about AngularJS testing. This will be quick and easy guide to get up and running with AngularJS testing.

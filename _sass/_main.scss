@@ -367,7 +367,7 @@ time {
 
 main {
   display: flex;
-  max-width: 47rem;
+  max-width: 55rem;
   margin: -5rem auto 0;
   padding: 2.4rem 2rem;
   flex-direction: column;
@@ -712,3 +712,9 @@ $link-color: var(--link-color);
 .text-left-align {
   text-align: left;
 }
+
+pre {
+  white-space: pre;
+  overflow-x: scroll;
+}
+

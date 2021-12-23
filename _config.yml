@@ -36,7 +36,7 @@ kramdown:
 toc:
   enabled: true
   h_min: 1
-  h_max: 3
+  h_max: 5
 
 exclude:
   - .jekyll-cache

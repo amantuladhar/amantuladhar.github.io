@@ -1,12 +1,9 @@
 ---
 layout: post
 title:  "AngularJS Testing with Jasmine"
-date: 2016-11-12
 description: "Let's get familiar with how we test AngularJS application using Jasmine"
 keywords: "js,javascript,jasmine,test,angularjs"
-categories: [Angular]
-tags: [JavaScript,Karma,Jasmine,AngularJS]
-icon: icon-angular
+tags: javascript angular
 ---
 
 In this article we will look at how we can test AngularJS application. Since this is the initial step and a first look this article will cover a very basic testing. We will be creating a simple application which has a `controller` whose sole responsibility is to initialize value to some variable on `$scope`.

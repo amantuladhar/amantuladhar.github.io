@@ -4,9 +4,7 @@ title: Java 9 exports and requires
 date: 2017-10-04
 description: "Using Java 9 exports and requires"
 keywords: "java,java9,module,jigsaw,modulesystem,basics,intro,exports,requires"
-categories: [Java]
-tags: [java,module,jigsaw,java9,module-system,exports,requires]
-icon: icon-java
+tags: java
 ---
 
 When we are dealing with Java 9 modules we can create an application such that one modules depends on other. We use `exports` keyword to define what visible to outside world and `requires` keyword to define module dependency.
