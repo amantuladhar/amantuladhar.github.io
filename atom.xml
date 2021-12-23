@@ -4,7 +4,7 @@
  <title>Aman</title>
  <link href="https://amantuladhar.github.io/atom.xml" rel="self"/>
  <link href="https://amantuladhar.github.io/"/>
- <updated>2021-12-23T00:49:41-05:00</updated>
+ <updated>2021-12-23T16:08:12-05:00</updated>
  <id>https://amantuladhar.github.io</id>
  <author>
    <name>Aman Tuladhar</name>
@@ -13,16 +13,172 @@
 
  
  <entry>
-   <title>Websocket with Spring boot and React - Simple Chat App</title>
-   <link href="https://amantuladhar.github.io/2021/12/22/websocket-springboot-react-building-simple-chat-app"/>
+   <title>WebSocket @MessageMapping</title>
+   <link href="https://amantuladhar.github.io/2021/12/23/websocket-message-mapping"/>
+   <updated>2021-12-23T00:00:00-05:00</updated>
+   <id>https://amantuladhar.github.io/2021/12/23/websocket-message-mapping</id>
+   <content type="html">&lt;h4 id=&quot;tldr&quot;&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TL;DR&lt;/code&gt;&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;&lt;a target=&quot;_blank&quot; href=&quot;https://github.com/amantuladhar/sse-websocket-reactive-api-kafka/tree/002-simple-chat-box-with-custom-rooms&quot;&gt;Source Code&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt; &lt;/p&gt;
+
+&lt;h4 id=&quot;related-post&quot;&gt;Related Post&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a target=&quot;_blank&quot; href=&quot;/2021/12/22/websocket-basics-with-spring-boot&quot;&gt;Part 1&lt;/a&gt; - WebSocket Basics&lt;/li&gt;
+  &lt;li&gt;&lt;a target=&quot;_blank&quot; href=&quot;/2021/12/23/websocket-message-mapping&quot;&gt;Part 2&lt;/a&gt; - (Current) WebSocket &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@MessageMapping&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;messagemapping---process-incoming-data&quot;&gt;@MessageMapping - Process incoming data&lt;/h4&gt;
+
+&lt;p&gt;On our previous post &lt;a target=&quot;_blank&quot; href=&quot;/2021/12/22/websocket-basics-with-spring-boot&quot;&gt;Part 1&lt;/a&gt; we create a simple chat app.
+Let’s extend the app and add ability to create and join rooms.&lt;/p&gt;
+
+&lt;p&gt;In order for us to create a custom room, we need ability to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;send()&lt;/code&gt; a message and process that message on server.
+On our previous post, we created a mechanism to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;send()&lt;/code&gt; a message, but server did not process that message.
+If you want server to process the message that is received, you need to create a method that is annotated with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@MessageMapping(url)&lt;/code&gt;. 
+Any data we send is available on method parameter.
+One catch is - we need to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Payload&lt;/code&gt; annotation on parameter&lt;/p&gt;
+
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@MessageMapping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;$BASE_URL/createRoom&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;createCustomRoom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;@Payload&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;roomName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now we can do anything we want with the roomName. For our simple purpose we will create a variable to hold room names.&lt;/p&gt;
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;py&quot;&gt;roomNames&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MutableSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;HashSet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;nd&quot;&gt;@SubscribeMapping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;BASE_URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;broadcastAvailableRooms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;client&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;convertAndSend&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;BASE_URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;roomNames&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nd&quot;&gt;@MessageMapping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;$BASE_URL/createRoom&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;createCustomRoom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;@Payload&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;roomName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;roomNames&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;contains&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;roomName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;roomNames&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;roomName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;broadcastAvailableRooms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;We will add room to our list if it doesn’t exist, and then we will broadcast all available rooms.
+Note I modified our &lt;strong&gt;base destination URL&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/ws/simple-chat-box&lt;/code&gt; to broadcast list of rooms.&lt;/p&gt;
+
+&lt;h4 id=&quot;reactjs-app-subscribe-to-list-of-room&quot;&gt;ReactJS App Subscribe To List Of Room&lt;/h4&gt;
+&lt;p&gt;Let’s update our frontend to allow us to create a room and view the list of rooms.
+First let’s connect our frontend with backend WebSocket and subscribe to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/ws/simple-chat-box&lt;/code&gt; which will broadcast list of rooms.&lt;/p&gt;
+&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;onUpdateRoomList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;setRoomList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;JSON&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;onWebSocketConnect&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_stompClient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;setStompClient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_stompClient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;_stompClient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;subscribe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;baseDestinationUrl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;onUpdateRoomList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;useEffect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;_stompClient&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Stomp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;over&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;SockJS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;wsConnectUrl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;_stompClient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({},&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;onWebSocketConnect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_stompClient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h4 id=&quot;rendering-list-of-rooms&quot;&gt;Rendering List Of Rooms&lt;/h4&gt;
+&lt;p&gt;Displaying the list of room names&lt;/p&gt;
+&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;styles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;roomList&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;roomList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;roomList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;room&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+          &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;styles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;room&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;onClickJoinRoom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;room&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+            Join &lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;room&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;
+          &lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;No Chat Rooms&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h4 id=&quot;reactjs-app-create-room&quot;&gt;ReactJS App Create Room&lt;/h4&gt;
+&lt;p&gt;Frontend is now subscribed to URL that broadcasts list of room available.
+Now let’s add UI to allow user to create room. Remember we already have backend code
+that create a room.&lt;/p&gt;
+&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createRoomName&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;onChange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}})&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;setCreateRoomName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;button&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;onClickCreateRoom&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;Create Room&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;button&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;onClickCreateRoom&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;stompClient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;baseDestinationUrl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/createRoom`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;createRoomName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;If you create a room now the UI should auto update.&lt;/p&gt;
+
+&lt;h4 id=&quot;reactjs-app-join-room&quot;&gt;ReactJS App Join Room&lt;/h4&gt;
+&lt;p&gt;Now it is time to add ability to join the room.
+When we implemented a UI to display list of room we also added
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;onClick&lt;/code&gt; handler that calls &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;onClickJoinRoom&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;onClickJoinRoom&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;roomName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;roomSubRef&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;roomSubRef&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;unsubscribe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;setJoinRoomName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;roomName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;setMessages&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([])&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;roomRef&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;stompClient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;subscribe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;baseDestinationUrl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;roomName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;onUpdateMessagesForRoom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;setRoomSubRef&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;roomRef&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Here’s an interesting part, it might look like we are subscribing to endpoint that we did not register on backend.
+But remember on &lt;a target=&quot;_blank&quot; href=&quot;/2021/12/22/websocket-basics-with-spring-boot&quot;&gt;Part 1&lt;/a&gt; I mentioned we can subscribe to any URL we want, it doesn’t need to be registered.
+We are more or less doing the same thing. But important part here is that we are using
+baseDestinationUrl as our starting path. Because we registered baseDestinationUrl, any destination URL
+that client use that is prefixed by baseDestinationUrl can be intercepted by using special annotation like
+@MessageMapping. baseDestinationUrl/createRoom is one of them. We did not register baseDesUrl/createRoom
+on our WebSocket configuration, but we were able special behavior to that particular URL because the
+subscription url was prefixed with baseDestination URl.&lt;/p&gt;
+
+&lt;p&gt;To show the messages we simply display messages content on UI&lt;/p&gt;
+&lt;div class=&quot;language-jsx highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;h3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;Messages for Room: &lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;joinRoomName&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;h3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;pre&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;JSON&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;stringify&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;messages&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;pre&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text&quot;&lt;/span&gt;
+           &lt;span class=&quot;na&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;newMessage&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;
+           &lt;span class=&quot;na&quot;&gt;onChange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}})&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;setNewMessage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;
+           &lt;span class=&quot;na&quot;&gt;onKeyDown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;onKeyDownUserMessage&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;References:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a target=&quot;_blank&quot; href=&quot;https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#websocket&quot;&gt;Spring Websocket Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>WebSocket Basics With Spring Boot And ReactJS</title>
+   <link href="https://amantuladhar.github.io/2021/12/22/websocket-basics-with-spring-boot"/>
    <updated>2021-12-22T00:00:00-05:00</updated>
-   <id>https://amantuladhar.github.io/2021/12/22/websocket-springboot-react-building-simple-chat-app</id>
+   <id>https://amantuladhar.github.io/2021/12/22/websocket-basics-with-spring-boot</id>
    <content type="html">&lt;h4 id=&quot;tldr&quot;&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TL;DR&lt;/code&gt;&lt;/strong&gt;&lt;/h4&gt;
 
 &lt;p&gt;&lt;a target=&quot;_blank&quot; href=&quot;https://github.com/amantuladhar/sse-websocket-reactive-api-kafka/tree/001-simple-chat-box&quot;&gt;Source Code&lt;/a&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 &lt;p&gt; &lt;/p&gt;
+
+&lt;h4 id=&quot;related-post&quot;&gt;Related Post&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a target=&quot;_blank&quot; href=&quot;/2021/12/22/websocket-basics-with-spring-boot&quot;&gt;Part 1&lt;/a&gt; - (Current) WebSocket Basics&lt;/li&gt;
+  &lt;li&gt;&lt;a target=&quot;_blank&quot; href=&quot;/2021/12/23/websocket-message-mapping&quot;&gt;Part 2&lt;/a&gt; - WebSocket &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@MessageMapping&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h4 id=&quot;create-spring-boot-project&quot;&gt;Create Spring Boot Project&lt;/h4&gt;
 
@@ -2681,9 +2837,9 @@ Add the following line to &lt;code class=&quot;language-plaintext highlighter-ro
  
  <entry>
    <title>AngularJS Testing with Jasmine</title>
-   <link href="https://amantuladhar.github.io/2016/11/12/unit-testing-with-jasmine"/>
-   <updated>2016-11-12T00:00:00-05:00</updated>
-   <id>https://amantuladhar.github.io/2016/11/12/unit-testing-with-jasmine</id>
+   <link href="https://amantuladhar.github.io/2016/11/23/unit-testing-with-jasmine"/>
+   <updated>2016-11-23T00:00:00-05:00</updated>
+   <id>https://amantuladhar.github.io/2016/11/23/unit-testing-with-jasmine</id>
    <content type="html">&lt;p&gt;In this article we will look at how we can test AngularJS application. Since this is the initial step and a first look this article will cover a very basic testing. We will be creating a simple application which has a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;controller&lt;/code&gt; whose sole responsibility is to initialize value to some variable on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$scope&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Let’s create a Simple application&lt;/p&gt;
@@ -3210,7 +3366,7 @@ docker network connect anetwork pythonapp
  </entry>
  
  <entry>
-   <title>Getting familier with Linux find command</title>
+   <title>Getting familiar with Linux find command</title>
    <link href="https://amantuladhar.github.io/2016/10/07/getting-familier-with-find"/>
    <updated>2016-10-07T00:00:00-04:00</updated>
    <id>https://amantuladhar.github.io/2016/10/07/getting-familier-with-find</id>
@@ -3442,9 +3598,9 @@ drwxrwxr-x 2 aman aman 4.0K Oct  7 10:31 somedir
    <link href="https://amantuladhar.github.io/2016/10/04/bash-useful-shortcuts"/>
    <updated>2016-10-04T00:00:00-04:00</updated>
    <id>https://amantuladhar.github.io/2016/10/04/bash-useful-shortcuts</id>
-   <content type="html">&lt;p&gt;Most of us are familier with executing commands on terminal. But, did you now that bash has set of convinent shortcuts that can make our life a lot more easier.&lt;/p&gt;
+   <content type="html">&lt;p&gt;Most of us are familiar with executing commands on terminal. But, did you now that bash has set of convinent shortcuts that can make our life a lot more easier.&lt;/p&gt;
 
-&lt;p&gt;Sometimes when we are typing command and all of sudden we forget to add &lt;strong&gt;sudo&lt;/strong&gt;. We can press &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CTRL + a&lt;/code&gt; and goto start of command line then type &lt;strong&gt;sudo&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Sometimes when we are typing command and all of a sudden we forget to add &lt;strong&gt;sudo&lt;/strong&gt;. We can press &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CTRL + a&lt;/code&gt; and goto start of command line then type &lt;strong&gt;sudo&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/blog/2016-10-04-BashShortcuts/ctrl-a.gif&quot; width=&quot;40%&quot; /&gt;&lt;/p&gt;
 
