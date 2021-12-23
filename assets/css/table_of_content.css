@@ -38,8 +38,8 @@
     background: 0 0;
     text-overflow: ellipsis;
     overflow: hidden;
-    white-space: nowrap;
-    position: relative
+    position: relative;
+    white-space: break-spaces;
 }
 
 .table-of-content-wrapper ul.summary li a:hover {

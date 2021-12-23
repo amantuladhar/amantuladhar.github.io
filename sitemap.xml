@@ -81,7 +81,14 @@
 <lastmod>2017-10-16T00:00:00-04:00</lastmod>
 </url>
 <url>
+<loc>https://amantuladhar.github.io/2021/12/22/websocket-springboot-react-building-simple-chat-app</loc>
+<lastmod>2021-12-22T00:00:00-05:00</lastmod>
+</url>
+<url>
 <loc>https://amantuladhar.github.io/about/</loc>
+</url>
+<url>
+<loc>https://amantuladhar.github.io/tag/spring-boot/</loc>
 </url>
 <url>
 <loc>https://amantuladhar.github.io/tag/java/</loc>
@@ -102,6 +109,9 @@
 <loc>https://amantuladhar.github.io/</loc>
 </url>
 <url>
+<loc>https://amantuladhar.github.io/tag/kotlin/</loc>
+</url>
+<url>
 <loc>https://amantuladhar.github.io/tag/angular/</loc>
 </url>
 <url>
@@ -109,5 +119,8 @@
 </url>
 <url>
 <loc>https://amantuladhar.github.io/page/2/</loc>
+</url>
+<url>
+<loc>https://amantuladhar.github.io/page/3/</loc>
 </url>
 </urlset>

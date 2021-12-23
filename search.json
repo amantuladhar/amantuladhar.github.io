@@ -1,6 +1,15 @@
 [
   
     {
+      "title"    : "Websocket with Spring boot and React - Simple Chat App",
+      "description" : "Build a simplest chat app with spring boot and websocket",
+      "category" : "",
+      "tags"     : "java, kotlin, websocket, spring, spring-boot, react",
+      "url"      : "/2021/12/22/websocket-springboot-react-building-simple-chat-app",
+      "date"     : "2021-12-22 00:00:00 -0500"
+    } ,
+  
+    {
       "title"    : "Java open and opens keyword with example",
       "description" : "Java open and opens keyword with example",
       "category" : "",
