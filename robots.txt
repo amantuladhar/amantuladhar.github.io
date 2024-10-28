@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://amantuladhar.github.io/sitemap.xml
+Sitemap: https://babal.dev/sitemap.xml

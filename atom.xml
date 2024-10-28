@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Aman</title>
- <link href="https://amantuladhar.github.io/atom.xml" rel="self"/>
- <link href="https://amantuladhar.github.io/"/>
- <updated>2024-10-27T22:43:16-04:00</updated>
- <id>https://amantuladhar.github.io</id>
+ <link href="https://babal.dev/atom.xml" rel="self"/>
+ <link href="https://babal.dev/"/>
+ <updated>2024-10-27T22:44:10-04:00</updated>
+ <id>https://babal.dev</id>
  <author>
    <name>Aman Tuladhar</name>
    <email>your-email@email.com</email>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>WebSocket @MessageMapping</title>
-   <link href="https://amantuladhar.github.io/2021/12/23/websocket-message-mapping"/>
+   <link href="https://babal.dev/2021/12/23/websocket-message-mapping"/>
    <updated>2021-12-23T00:00:00-05:00</updated>
-   <id>https://amantuladhar.github.io/2021/12/23/websocket-message-mapping</id>
+   <id>https://babal.dev/2021/12/23/websocket-message-mapping</id>
    <content type="html">&lt;h4 id=&quot;tldr&quot;&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TL;DR&lt;/code&gt;&lt;/strong&gt;&lt;/h4&gt;
 
 &lt;p&gt;&lt;a target=&quot;_blank&quot; href=&quot;https://github.com/amantuladhar/sse-websocket-reactive-api-kafka/tree/002-simple-chat-box-with-custom-rooms&quot;&gt;Source Code&lt;/a&gt;&lt;/p&gt;
@@ -164,9 +164,9 @@ subscription url was prefixed with baseDestination URl.&lt;/p&gt;
  
  <entry>
    <title>WebSocket Basics With Spring Boot And ReactJS</title>
-   <link href="https://amantuladhar.github.io/2021/12/22/websocket-basics-with-spring-boot"/>
+   <link href="https://babal.dev/2021/12/22/websocket-basics-with-spring-boot"/>
    <updated>2021-12-22T00:00:00-05:00</updated>
-   <id>https://amantuladhar.github.io/2021/12/22/websocket-basics-with-spring-boot</id>
+   <id>https://babal.dev/2021/12/22/websocket-basics-with-spring-boot</id>
    <content type="html">&lt;h4 id=&quot;tldr&quot;&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TL;DR&lt;/code&gt;&lt;/strong&gt;&lt;/h4&gt;
 
 &lt;p&gt;&lt;a target=&quot;_blank&quot; href=&quot;https://github.com/amantuladhar/sse-websocket-reactive-api-kafka/tree/001-simple-chat-box&quot;&gt;Source Code&lt;/a&gt;&lt;/p&gt;
@@ -664,9 +664,9 @@ Let’s add that part in.&lt;/p&gt;
  
  <entry>
    <title>Java open and opens keyword with example</title>
-   <link href="https://amantuladhar.github.io/2017/10/16/java-9-open-and-opens-keyword-with-example"/>
+   <link href="https://babal.dev/2017/10/16/java-9-open-and-opens-keyword-with-example"/>
    <updated>2017-10-16T00:00:00-04:00</updated>
-   <id>https://amantuladhar.github.io/2017/10/16/java-9-open-and-opens-keyword-with-example</id>
+   <id>https://babal.dev/2017/10/16/java-9-open-and-opens-keyword-with-example</id>
    <content type="html">&lt;p&gt;We have come a long way to exploring the Java Platform Module System.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;/2017/10/03/java-9-module-intro&quot;&gt;Java 9 Module System Intro&lt;/a&gt;&lt;/p&gt;
@@ -962,9 +962,9 @@ the &lt;a href=&quot;https://github.com/atuladhar-aman/java9-basics/tree/master/
  
  <entry>
    <title>Java 9 automatic module with example</title>
-   <link href="https://amantuladhar.github.io/2017/10/09/java-9-automatic-module-with-example"/>
+   <link href="https://babal.dev/2017/10/09/java-9-automatic-module-with-example"/>
    <updated>2017-10-09T00:00:00-04:00</updated>
-   <id>https://amantuladhar.github.io/2017/10/09/java-9-automatic-module-with-example</id>
+   <id>https://babal.dev/2017/10/09/java-9-automatic-module-with-example</id>
    <content type="html">&lt;p&gt;In previous posts we were exploring how new module system works.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;/2017/10/03/java-9-module-intro&quot;&gt;Java 9 Module System Intro&lt;/a&gt;&lt;/p&gt;
@@ -1059,9 +1059,9 @@ java.lang.module.FindException: Module guava not found, required by com.moduleon
  
  <entry>
    <title>Java 9 Transitive Dependency</title>
-   <link href="https://amantuladhar.github.io/2017/10/05/java-using-transitive-dependency"/>
+   <link href="https://babal.dev/2017/10/05/java-using-transitive-dependency"/>
    <updated>2017-10-05T00:00:00-04:00</updated>
-   <id>https://amantuladhar.github.io/2017/10/05/java-using-transitive-dependency</id>
+   <id>https://babal.dev/2017/10/05/java-using-transitive-dependency</id>
    <content type="html">&lt;p&gt;Let’s see how Java handles transitive dependencies. We will be creating three modules&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;com.moduleone&lt;/code&gt;&lt;/li&gt;
@@ -1163,9 +1163,9 @@ Create a third module &lt;code class=&quot;language-plaintext highlighter-rouge&
  
  <entry>
    <title>Java 9 Using exports with to</title>
-   <link href="https://amantuladhar.github.io/2017/10/05/java-export-module-to-specific-module-only"/>
+   <link href="https://babal.dev/2017/10/05/java-export-module-to-specific-module-only"/>
    <updated>2017-10-05T00:00:00-04:00</updated>
-   <id>https://amantuladhar.github.io/2017/10/05/java-export-module-to-specific-module-only</id>
+   <id>https://babal.dev/2017/10/05/java-export-module-to-specific-module-only</id>
    <content type="html">&lt;p&gt;In this example we will create three module&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;com.moduleone&lt;/code&gt;&lt;/li&gt;
@@ -1289,9 +1289,9 @@ import com.moduleone.ModuleOne&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
  
  <entry>
    <title>Java 9 exports and requires</title>
-   <link href="https://amantuladhar.github.io/2017/10/04/java-9-exports-and-requires"/>
+   <link href="https://babal.dev/2017/10/04/java-9-exports-and-requires"/>
    <updated>2017-10-04T00:00:00-04:00</updated>
-   <id>https://amantuladhar.github.io/2017/10/04/java-9-exports-and-requires</id>
+   <id>https://babal.dev/2017/10/04/java-9-exports-and-requires</id>
    <content type="html">&lt;p&gt;When we are dealing with Java 9 modules we can create an application such that one modules depends on other. We use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;exports&lt;/code&gt; keyword to define what visible to outside world and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;requires&lt;/code&gt; keyword to define module dependency.&lt;/p&gt;
 
 &lt;p&gt;For this example we will create two modules: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;com.moduleone&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;com.moduletwo&lt;/code&gt;&lt;/p&gt;
@@ -1383,9 +1383,9 @@ On &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;com.module
  
  <entry>
    <title>Introduction to Java 9 Module</title>
-   <link href="https://amantuladhar.github.io/2017/10/03/java-9-module-intro"/>
+   <link href="https://babal.dev/2017/10/03/java-9-module-intro"/>
    <updated>2017-10-03T00:00:00-04:00</updated>
-   <id>https://amantuladhar.github.io/2017/10/03/java-9-module-intro</id>
+   <id>https://babal.dev/2017/10/03/java-9-module-intro</id>
    <content type="html">&lt;p&gt;With Java 9 we can use module system called &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Jigsaw&lt;/code&gt;. Without talking about module a lot let’s dive into modular world of Java.&lt;/p&gt;
 
 &lt;p&gt;Before creating any module we have to keep few things in mind&lt;/p&gt;
@@ -1453,9 +1453,9 @@ With this simple code we have created a module. But we still do not have any cod
  
  <entry>
    <title>AngularJS Testing in Nutshell</title>
-   <link href="https://amantuladhar.github.io/2017/07/11/angularjs-testing-in-nutshell"/>
+   <link href="https://babal.dev/2017/07/11/angularjs-testing-in-nutshell"/>
    <updated>2017-07-11T00:00:00-04:00</updated>
-   <id>https://amantuladhar.github.io/2017/07/11/angularjs-testing-in-nutshell</id>
+   <id>https://babal.dev/2017/07/11/angularjs-testing-in-nutshell</id>
    <content type="html">&lt;p&gt;In this post I will talk about AngularJS testing. This will be quick and easy guide to get up and running with AngularJS testing.
 This post cover basics of :&lt;/p&gt;
 
@@ -1753,9 +1753,9 @@ These modules, when loaded, puts these HTML files into the &lt;code class=&quot;
  
  <entry>
    <title>Getting familiar with spyOn for Angular Testing</title>
-   <link href="https://amantuladhar.github.io/2016/12/25/understaing-spy-on-jasmine"/>
+   <link href="https://babal.dev/2016/12/25/understaing-spy-on-jasmine"/>
    <updated>2016-12-25T00:00:00-05:00</updated>
-   <id>https://amantuladhar.github.io/2016/12/25/understaing-spy-on-jasmine</id>
+   <id>https://babal.dev/2016/12/25/understaing-spy-on-jasmine</id>
    <content type="html">&lt;p&gt;Now that we know how to do simple testing let’s get familiar with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;spy&lt;/code&gt; feature of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jasmine&lt;/code&gt;.
 In previous post we saw different way of mocking services and/or objects.&lt;/p&gt;
 
@@ -1868,9 +1868,9 @@ If you want function call to delegate to the actual implemantation we need to ad
  
  <entry>
    <title>Testing Controller (with Dependencies) in AngularJS</title>
-   <link href="https://amantuladhar.github.io/2016/12/24/angular-testing-controller-with-dependency"/>
+   <link href="https://babal.dev/2016/12/24/angular-testing-controller-with-dependency"/>
    <updated>2016-12-24T00:00:00-05:00</updated>
-   <id>https://amantuladhar.github.io/2016/12/24/angular-testing-controller-with-dependency</id>
+   <id>https://babal.dev/2016/12/24/angular-testing-controller-with-dependency</id>
    <content type="html">&lt;p&gt;In &lt;a href=&quot;https://atuladhar-aman.github.io/blog/2016-11-30-angular-testing-controller/&quot;&gt;Part 4&lt;/a&gt; of this series we looked at 
 how we can test AngularJS Controller which doesn’t have any dependencies. But, in real world,
 AngularJS Controllers usually dependent on Services. In this post we will look, how we can unit test controllers
@@ -2193,9 +2193,9 @@ and change the behaviour of spied function.&lt;/p&gt;
  
  <entry>
    <title>Testing Controller in AngularJS</title>
-   <link href="https://amantuladhar.github.io/2016/11/30/angular-testing-controller"/>
+   <link href="https://babal.dev/2016/11/30/angular-testing-controller"/>
    <updated>2016-11-30T00:00:00-05:00</updated>
-   <id>https://amantuladhar.github.io/2016/11/30/angular-testing-controller</id>
+   <id>https://babal.dev/2016/11/30/angular-testing-controller</id>
    <content type="html">&lt;p&gt;In &lt;a href=&quot;https://atuladhar-aman.github.io/blog/2016-11-23-unit-testing-angular-1-part-1/&quot;&gt;Part 1&lt;/a&gt; &lt;a href=&quot;https://atuladhar-aman.github.io/blog/2016-11-24-integrate-karma-with-jasmine/&quot;&gt;Part 2&lt;/a&gt; and &lt;a href=&quot;https://atuladhar-aman.github.io/blog/2016-11-25-using-gulp-to-run-karma/&quot;&gt;Part 3&lt;/a&gt; of this article we didn’t talk a lot about testing. Those 3 parts were more focused on &lt;strong&gt;configuration&lt;/strong&gt; required to do testing.&lt;/p&gt;
 
 &lt;p&gt;In this article I’ll show you how we can test simple AngularJS &lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Controllers&lt;/code&gt;&lt;/strong&gt;.&lt;/p&gt;
@@ -2411,9 +2411,9 @@ and change the behaviour of spied function.&lt;/p&gt;
  
  <entry>
    <title>Using Gulp to Start Karma</title>
-   <link href="https://amantuladhar.github.io/2016/11/25/using-gulp-to-run-karma"/>
+   <link href="https://babal.dev/2016/11/25/using-gulp-to-run-karma"/>
    <updated>2016-11-25T00:00:00-05:00</updated>
-   <id>https://amantuladhar.github.io/2016/11/25/using-gulp-to-run-karma</id>
+   <id>https://babal.dev/2016/11/25/using-gulp-to-run-karma</id>
    <content type="html">&lt;p&gt;In this article we will use &lt;a href=&quot;http://gulpjs.com/&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gulp&lt;/code&gt;&lt;/a&gt; to run our &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Specs&lt;/code&gt;. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gulp&lt;/code&gt; is a &lt;strong&gt;stream-based&lt;/strong&gt; build system with a simple yet powerful API focusing on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;code&lt;/code&gt; &lt;strong&gt;over&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;configuration&lt;/code&gt;. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gulp&lt;/code&gt; builds use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Node.js&lt;/code&gt; streams that do not need to write temporary files or folders to disk, which results in &lt;strong&gt;faster builds&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gulp&lt;/code&gt; is very easy to learn ( than Grunt - &lt;em&gt;opinionated view&lt;/em&gt;) but I won’t be covering basics of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gulp&lt;/code&gt; in this article. If you want to learn about gulp you can visit &lt;a href=&quot;https://css-tricks.com/gulp-for-beginners/&quot;&gt;Getting Started with Gulp&lt;/a&gt;.&lt;/p&gt;
@@ -2661,9 +2661,9 @@ If this process is not working for you visit &lt;a href=&quot;http://www.bendang
  
  <entry>
    <title>Integrating Karma on AngularJS Testing</title>
-   <link href="https://amantuladhar.github.io/2016/11/24/integrate-karma-with-jasmine"/>
+   <link href="https://babal.dev/2016/11/24/integrate-karma-with-jasmine"/>
    <updated>2016-11-24T00:00:00-05:00</updated>
-   <id>https://amantuladhar.github.io/2016/11/24/integrate-karma-with-jasmine</id>
+   <id>https://babal.dev/2016/11/24/integrate-karma-with-jasmine</id>
    <content type="html">&lt;p&gt;In this article we will use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Karma&lt;/code&gt; to run our &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Jasmine&lt;/code&gt; unit test that we created on &lt;a href=&quot;https://atuladhar-aman.github.io/blog/2016-11-23-UnitTestingAngular1Part1/&quot;&gt;Part 1&lt;/a&gt; of this series. I recommend you to go through &lt;strong&gt;Part 1&lt;/strong&gt; before reading this article.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://karma-runner.github.io/,&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Karma&lt;/code&gt;&lt;/a&gt; is the test runner for test-driven development and continuous integration. I’ll walk you throught the basic proces to install &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Karma&lt;/code&gt;. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Karma&lt;/code&gt; executes JavaScript code in browser. With help of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Karma&lt;/code&gt; you can test against multiple browsers, locally or on continious integration server. We can enable &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Karma watch&lt;/code&gt; feature to run unit test when application code changes. Since we are using the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Jasmine&lt;/code&gt; to write our &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Specs&lt;/code&gt; we need &lt;a href=&quot;https://www.npmjs.com/package/jasmine-core&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Jasmine-Core&lt;/code&gt;&lt;/a&gt; and &lt;a href=&quot;https://github.com/karma-runner/karma-jasmine.&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Karma Jasmine&lt;/code&gt;&lt;/a&gt; plugin. In this article we will run our &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Specs&lt;/code&gt; on Chrome browser so we need &lt;a href=&quot;https://github.com/karma-runner/karma-chrome-launcher&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Karma Chrome launcher&lt;/code&gt;&lt;/a&gt; plugin.&lt;/p&gt;
@@ -2837,9 +2837,9 @@ Add the following line to &lt;code class=&quot;language-plaintext highlighter-ro
  
  <entry>
    <title>AngularJS Testing with Jasmine</title>
-   <link href="https://amantuladhar.github.io/2016/11/23/unit-testing-with-jasmine"/>
+   <link href="https://babal.dev/2016/11/23/unit-testing-with-jasmine"/>
    <updated>2016-11-23T00:00:00-05:00</updated>
-   <id>https://amantuladhar.github.io/2016/11/23/unit-testing-with-jasmine</id>
+   <id>https://babal.dev/2016/11/23/unit-testing-with-jasmine</id>
    <content type="html">&lt;p&gt;In this article we will look at how we can test AngularJS application. Since this is the initial step and a first look this article will cover a very basic testing. We will be creating a simple application which has a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;controller&lt;/code&gt; whose sole responsibility is to initialize value to some variable on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$scope&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Let’s create a Simple application&lt;/p&gt;
@@ -3050,9 +3050,9 @@ Add the following line to &lt;code class=&quot;language-plaintext highlighter-ro
  
  <entry>
    <title>Splitting with REGex vs Parsing</title>
-   <link href="https://amantuladhar.github.io/2016/10/19/splitting-vs-parsing"/>
+   <link href="https://babal.dev/2016/10/19/splitting-vs-parsing"/>
    <updated>2016-10-19T00:00:00-04:00</updated>
-   <id>https://amantuladhar.github.io/2016/10/19/splitting-vs-parsing</id>
+   <id>https://babal.dev/2016/10/19/splitting-vs-parsing</id>
    <content type="html">&lt;p&gt;In this post I’ll walk you through a simple scenario where you have to split the CSV file. It’s pretty simple with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;JAVA&lt;/code&gt; you just need to call the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;split(String)&lt;/code&gt; method of String class. If you want to split your string with comma (,) you can pass comma as argument of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;split(,)&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;You need to split the CSV provided below (from now on refer this String as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;row&lt;/code&gt;).&lt;/p&gt;
@@ -3229,9 +3229,9 @@ Time with parsing:	      5820
  
  <entry>
    <title>Mapping CapsLock to Esc or Control</title>
-   <link href="https://amantuladhar.github.io/2016/10/09/caps-to-esc-and-control"/>
+   <link href="https://babal.dev/2016/10/09/caps-to-esc-and-control"/>
    <updated>2016-10-09T00:00:00-04:00</updated>
-   <id>https://amantuladhar.github.io/2016/10/09/caps-to-esc-and-control</id>
+   <id>https://babal.dev/2016/10/09/caps-to-esc-and-control</id>
    <content type="html">&lt;p&gt;If you use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;VIM&lt;/code&gt; you know pain of pressing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ESC&lt;/code&gt; button. Your pinky finger needs to stretch a lot. In this post I’ll try to remove the burden of your pinky finger.I’ll show you ways to map your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Caps&lt;/code&gt; as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ESC&lt;/code&gt; when pressed alone but, when pressed with other keys like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a&lt;/code&gt; will it will be registered as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Control&lt;/code&gt;. To make long story short when you press &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Caps&lt;/code&gt; you will register &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ESC&lt;/code&gt; key and when you press &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Caps + a&lt;/code&gt; you will register &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ctrl + a&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;For this to work we are going to use &lt;a href=&quot;https://github.com/alols/xcape&quot;&gt;xcape&lt;/a&gt;&lt;/p&gt;
@@ -3297,9 +3297,9 @@ xcape &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s1&q
  
  <entry>
    <title>Docker Network Between Container</title>
-   <link href="https://amantuladhar.github.io/2016/10/08/docker-network-between-container"/>
+   <link href="https://babal.dev/2016/10/08/docker-network-between-container"/>
    <updated>2016-10-08T00:00:00-04:00</updated>
-   <id>https://amantuladhar.github.io/2016/10/08/docker-network-between-container</id>
+   <id>https://babal.dev/2016/10/08/docker-network-between-container</id>
    <content type="html">&lt;p&gt;We can run multiple container on our host machine using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Docker&lt;/code&gt;. By default when we run multiple container, one cannot communicate with other. If we want our multiple container to communicate between each other we can use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Docker Network&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Docker Network&lt;/code&gt; lets you create a &lt;em&gt;isolated network&lt;/em&gt; where we can connect our container. Container cannot access external network but if other container are connected to same network they can orchestrate between each other. To create a network is simple as&lt;/p&gt;
@@ -3367,9 +3367,9 @@ docker network connect anetwork pythonapp
  
  <entry>
    <title>Getting familiar with Linux find command</title>
-   <link href="https://amantuladhar.github.io/2016/10/07/getting-familier-with-find"/>
+   <link href="https://babal.dev/2016/10/07/getting-familier-with-find"/>
    <updated>2016-10-07T00:00:00-04:00</updated>
-   <id>https://amantuladhar.github.io/2016/10/07/getting-familier-with-find</id>
+   <id>https://babal.dev/2016/10/07/getting-familier-with-find</id>
    <content type="html">&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;find&lt;/code&gt; command is one of the most important and much used command in Linux systems. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;find&lt;/code&gt; command is used to search and locate list of files and directories based on conditions you specify for files that match the arguments. In this article we will get familier with linux &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;find&lt;/code&gt; command.&lt;/p&gt;
 
 &lt;p&gt;First things first, to get more knowledge on any linux command we can use linux manual page using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;man &amp;lt;command_name&amp;gt;&lt;/code&gt;. For more information about find you can use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;man find&lt;/code&gt; and you’ll get in depth description on how we can use linux command.&lt;/p&gt;
@@ -3595,9 +3595,9 @@ drwxrwxr-x 2 aman aman 4.0K Oct  7 10:31 somedir
  
  <entry>
    <title>Bash Shortcuts</title>
-   <link href="https://amantuladhar.github.io/2016/10/04/bash-useful-shortcuts"/>
+   <link href="https://babal.dev/2016/10/04/bash-useful-shortcuts"/>
    <updated>2016-10-04T00:00:00-04:00</updated>
-   <id>https://amantuladhar.github.io/2016/10/04/bash-useful-shortcuts</id>
+   <id>https://babal.dev/2016/10/04/bash-useful-shortcuts</id>
    <content type="html">&lt;p&gt;Most of us are familiar with executing commands on terminal. But, did you now that bash has set of convinent shortcuts that can make our life a lot more easier.&lt;/p&gt;
 
 &lt;p&gt;Sometimes when we are typing command and all of a sudden we forget to add &lt;strong&gt;sudo&lt;/strong&gt;. We can press &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CTRL + a&lt;/code&gt; and goto start of command line then type &lt;strong&gt;sudo&lt;/strong&gt;&lt;/p&gt;
@@ -3686,9 +3686,9 @@ drwxrwxr-x 2 aman aman 4.0K Oct  7 10:31 somedir
  
  <entry>
    <title>Debugging Java Application Running on Docker</title>
-   <link href="https://amantuladhar.github.io/2016/10/03/debugging-java-application"/>
+   <link href="https://babal.dev/2016/10/03/debugging-java-application"/>
    <updated>2016-10-03T00:00:00-04:00</updated>
-   <id>https://amantuladhar.github.io/2016/10/03/debugging-java-application</id>
+   <id>https://babal.dev/2016/10/03/debugging-java-application</id>
    <content type="html">&lt;p&gt;In this post I will explain how you can &lt;strong&gt;debugging Java Application&lt;/strong&gt; that is running on &lt;strong&gt;Docker&lt;/strong&gt; like a &lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;boss&lt;/code&gt;&lt;/strong&gt;. To be precise I will explain how we can debug the application that uses &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Maven&lt;/code&gt;. I will show you how we can attach our debugger on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;IntelliJ Idea&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Let’s assume we have a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SpringBoot Application&lt;/code&gt;. To run our application we use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mvn spring-boot:run&lt;/code&gt;. If we were to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;IDE&lt;/code&gt; directly to run our application, we can directly use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;debugging&lt;/code&gt; feature provided by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;IDE&lt;/code&gt;. But, when we run our application on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Docker&lt;/code&gt; we execute our application with help of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;command [mvn spring-boot:run]&lt;/code&gt;.&lt;/p&gt;
@@ -3742,9 +3742,9 @@ If you change the &lt;code class=&quot;language-plaintext highlighter-rouge&quot
  
  <entry>
    <title>@PostConstruct</title>
-   <link href="https://amantuladhar.github.io/2016/10/02/post-construct"/>
+   <link href="https://babal.dev/2016/10/02/post-construct"/>
    <updated>2016-10-02T00:00:00-04:00</updated>
-   <id>https://amantuladhar.github.io/2016/10/02/post-construct</id>
+   <id>https://babal.dev/2016/10/02/post-construct</id>
    <content type="html">&lt;p&gt;In this article we will talk about &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@PostConstruct&lt;/code&gt;. Let’s start with simple example&lt;/p&gt;
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@Service&lt;/span&gt;
