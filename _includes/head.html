@@ -1,7 +1,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
+  <link href=" https://cdn.jsdelivr.net/npm/@fontsource/monaspace-krypton@5.1.0/index.min.css " rel="stylesheet">
   <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/assets/css/syntax.css">
   <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/assets/css/table_of_content.css">
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
@@ -24,15 +25,15 @@
         - {{ site.description | escape }}
       {% endunless %}
     </title>
-  
-  
 
-  
+
+
+
     <link rel="shortcut icon" href="{{ site.url }}{{ site.baseurl }}/favicon.png">
     <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ site.url }}{{ site.baseurl }}/atom.xml">
     <link rel="alternate" type="application/json" title="{{ site.title }}" href="{{ site.url }}{{ site.baseurl }}/feed.json" />
     <link rel="sitemap" type="application/xml" title="sitemap" href="{{ site.url }}{{ site.baseurl }}/sitemap.xml" />
-      
+
   {% if site.googlewebfonts %}
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?{{ site.googlewebfonts }}&display=swap" rel="stylesheet">

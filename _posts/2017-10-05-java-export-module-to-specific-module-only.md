@@ -35,8 +35,8 @@ Here's the directory structure
         └── module-info.java
 ```
 I will be modifying the example from previous post so, if you haven't read it here's a link to them
-1. [Part 1: Java Module Basics/Intro](http://atuladhar-aman.github.io/java/2017/10/03/java-9-module-intro.html)
-2. [Part 2: Java exports and requires keyword](http://atuladhar-aman.github.io/java/2017/10/04/java-9-exports-and-requires.html)
+1. [Part 1: Java Module Basics/Intro](http://amantuladhar.github.io/java/2017/10/03/java-9-module-intro.html)
+2. [Part 2: Java exports and requires keyword](http://amantuladhar.github.io/java/2017/10/04/java-9-exports-and-requires.html)
 
 
 From previous example I just modified the `com.moduleone` `module-info.java` file to use `to` keyword.
@@ -128,4 +128,4 @@ Compile and run the code: `./run.sh com.modulethree ModuleThree` and your code w
 ## **Conclusion**
 You can see the power of using `exports` with `to` here. If you want your code to be visible to only certain modules you can do that easily.
 
-[GitHub Code](https://github.com/atuladhar-aman/java9-basics/tree/master/03-export-to-specific-module-only)
+[GitHub Code](https://github.com/amantuladhar/java9-basics/tree/master/03-export-to-specific-module-only)

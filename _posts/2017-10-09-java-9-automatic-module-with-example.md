@@ -6,7 +6,7 @@ keywords: "java,java9,module,jigsaw,modulesystem,basics,intro,automatic-module,a
 tags: java
 ---
 
-In previous posts we were exploring how new module system works. 
+In previous posts we were exploring how new module system works.
 
 [Java 9 Module System Intro]({% post_url 2017-10-03-java-9-module-intro %})
 
@@ -31,7 +31,7 @@ For this example we will be working with following directory structure
         └── module-info.java
 
 ```
-[GitHub code here](https://github.com/atuladhar-aman/java9-basics/tree/master/05-java-9-automatic-modules-example)
+[GitHub code here](https://github.com/amantuladhar/java9-basics/tree/master/05-java-9-automatic-modules-example)
 
 Let's write some code on ModuleOne that uses **google-guava** library.
 
@@ -102,7 +102,3 @@ java.lang.module.FindException: Module guava not found, required by com.moduleon
 ```
 
 Well, this is it for Java 9 automatic module. Cheers!!
-
-
-
-

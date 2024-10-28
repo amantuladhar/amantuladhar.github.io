@@ -49,11 +49,11 @@ Compile: `javac -d mods --module-source-path src $(find src -name "*.java")`
 
 Run: `java --module-path mods -m com.moduleone/com.moduleone.ModuleOne`
 
-**OR** 
+**OR**
 
-You can use the [script I created to compile and run the program.](https://github.com/atuladhar-aman/java9-basics/blob/master/01-module-basics/run.sh) 
+You can use the [script I created to compile and run the program.](https://github.com/amantuladhar/java9-basics/blob/master/01-module-basics/run.sh)
 
-We run the code using `./run.sh com.moduletwo ModuleTwo` 
+We run the code using `./run.sh com.moduletwo ModuleTwo`
 
 ```bash
 src/com.moduletwo/com/moduletwo/ModuleTwo.java:3: error: package com.moduleone is not visible

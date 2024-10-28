@@ -93,7 +93,7 @@ We can fix that by adding add `requires` statement on `src/com.modulethree/modul
 ```java
 module com.modulethree {
     requires com.moduletwo;
-    requires com.moduleone;   
+    requires com.moduleone;
 }
 ```
 
@@ -106,8 +106,8 @@ module com.moduletwo{
     exports com.moduletwo;
 }
 ```
-Now if you compile our code compile and runs successfully. Notice we are still not declaring that `com.modulethree` requires `com.moduleone` but because of transitive dependency we are able to use it. Keyword `transitive` must come after keyword `requires`. 
+Now if you compile our code compile and runs successfully. Notice we are still not declaring that `com.modulethree` requires `com.moduleone` but because of transitive dependency we are able to use it. Keyword `transitive` must come after keyword `requires`.
 
 If **module B** has `requires transitive` dependency on **module A** and **module C** simpley `requires` **module B**, then **module C** will have *implicit dependence* on **module A**.
 
-[GitHub Code](https://github.com/atuladhar-aman/java9-basics/tree/master/04-java-transitive-dependency)
+[GitHub Code](https://github.com/amantuladhar/java9-basics/tree/master/04-java-transitive-dependency)

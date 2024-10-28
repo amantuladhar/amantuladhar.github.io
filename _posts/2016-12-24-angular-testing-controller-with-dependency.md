@@ -7,11 +7,11 @@ categories: [Angular]
 tags: javascript angular
 ---
 
-In [Part 4](https://atuladhar-aman.github.io/blog/2016-11-30-angular-testing-controller/) of this series we looked at 
+In [Part 4](https://amantuladhar.github.io/blog/2016-11-30-angular-testing-controller/) of this series we looked at
 how we can test AngularJS Controller which doesn't have any dependencies. But, in real world,
 AngularJS Controllers usually dependent on Services. In this post we will look, how we can unit test controllers
 which have dependencies.
-On the way, we will explore how we can use `angular.mock.module(...)`. 
+On the way, we will explore how we can use `angular.mock.module(...)`.
 We will get insight on how `angular.mock.inject()` works.
 
 Here's a simple todo app which has has `TodoController` and `TodoService`. `TodoController` is dependent on `TodoService`.
@@ -137,7 +137,7 @@ If we want to get hold of `TodoService` we can use `angular.mock.inject(..)` whi
 
 ```
 
-Now that we know how angular `injector` helps to locate our service, let's look at how we can mock the service classes. Note: 
+Now that we know how angular `injector` helps to locate our service, let's look at how we can mock the service classes. Note:
 above example calles the real service methods.
 
 
@@ -328,8 +328,3 @@ describe('TodoController', function() {
 
 Above example is very simple and I don't think it needs any explanation. In next post we will se how we can spy object using `spyOn`
 and change the behaviour of spied function.
-
-
-
-
-

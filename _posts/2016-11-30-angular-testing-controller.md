@@ -6,7 +6,7 @@ keywords: "js,javascript,jasmine,test,angularjs,karma,controller"
 tags: javascript angular
 ---
 
-In [Part 1](https://atuladhar-aman.github.io/blog/2016-11-23-unit-testing-angular-1-part-1/) [Part 2](https://atuladhar-aman.github.io/blog/2016-11-24-integrate-karma-with-jasmine/) and [Part 3](https://atuladhar-aman.github.io/blog/2016-11-25-using-gulp-to-run-karma/) of this article we didn't talk a lot about testing. Those 3 parts were more focused on **configuration** required to do testing.
+In [Part 1](https://amantuladhar.github.io/blog/2016-11-23-unit-testing-angular-1-part-1/) [Part 2](https://atuladhar-aman.github.io/blog/2016-11-24-integrate-karma-with-jasmine/) and [Part 3](https://atuladhar-aman.github.io/blog/2016-11-25-using-gulp-to-run-karma/) of this article we didn't talk a lot about testing. Those 3 parts were more focused on **configuration** required to do testing.
 
 In this article I'll show you how we can test simple AngularJS **`Controllers`**.
 
@@ -97,9 +97,9 @@ describe('Test for TodoController', function(){
     beforeEach(angular.mock.inject(function(_$controller_) {
         $controller = _$controller_;
     }));
-    
+
     describe('Test add functionality of Controller',function(){
-        
+
     });
 });
 ```

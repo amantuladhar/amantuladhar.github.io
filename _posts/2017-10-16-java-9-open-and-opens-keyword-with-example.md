@@ -1,6 +1,6 @@
 ---
-layout: post 
-title: Java open and opens keyword with example 
+layout: post
+title: Java open and opens keyword with example
 description: "Java open and opens keyword with example"
 tags: java
 ---
@@ -311,4 +311,4 @@ Exception in thread "main" java.lang.ClassNotFoundException: com.exported.Export
 ```
 
 So this is it for `open` and `opens` keyword. You can find
-the [Github code here](https://github.com/atuladhar-aman/java9-basics/tree/master/06-reflection-java-open-keyword)
+the [Github code here](https://github.com/amantuladhar/java9-basics/tree/master/06-reflection-java-open-keyword)
