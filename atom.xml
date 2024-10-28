@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
- <title>Aman</title>
+ <title>BalalDev</title>
  <link href="https://babal.dev/atom.xml" rel="self"/>
  <link href="https://babal.dev/"/>
- <updated>2024-10-27T23:24:55-04:00</updated>
+ <updated>2024-10-27T23:30:10-04:00</updated>
  <id>https://babal.dev</id>
  <author>
    <name>Aman Tuladhar</name>
@@ -956,7 +956,7 @@ Exception &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;thread &lt;span class=
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;So this is it for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;open&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;opens&lt;/code&gt; keyword. You can find
-the &lt;a href=&quot;https://github.com/atuladhar-aman/java9-basics/tree/master/06-reflection-java-open-keyword&quot;&gt;Github code here&lt;/a&gt;&lt;/p&gt;
+the &lt;a href=&quot;https://github.com/amantuladhar/java9-basics/tree/master/06-reflection-java-open-keyword&quot;&gt;Github code here&lt;/a&gt;&lt;/p&gt;
 </content>
  </entry>
  
@@ -989,7 +989,7 @@ the &lt;a href=&quot;https://github.com/atuladhar-aman/java9-basics/tree/master/
         └── module-info.java
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/atuladhar-aman/java9-basics/tree/master/05-java-9-automatic-modules-example&quot;&gt;GitHub code here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/amantuladhar/java9-basics/tree/master/05-java-9-automatic-modules-example&quot;&gt;GitHub code here&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Let’s write some code on ModuleOne that uses &lt;strong&gt;google-guava&lt;/strong&gt; library.&lt;/p&gt;
 
@@ -1053,7 +1053,6 @@ java.lang.module.FindException: Module guava not found, required by com.moduleon
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Well, this is it for Java 9 automatic module. Cheers!!&lt;/p&gt;
-
 </content>
  </entry>
  
@@ -1141,7 +1140,7 @@ Create a third module &lt;code class=&quot;language-plaintext highlighter-rouge&
 &lt;p&gt;We can fix that by adding add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;requires&lt;/code&gt; statement on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/com.modulethree/module-info.java&lt;/code&gt;&lt;/p&gt;
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;modulethree&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;requires&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;moduletwo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;requires&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;moduleone&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;   
+    &lt;span class=&quot;n&quot;&gt;requires&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;moduleone&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -1157,7 +1156,7 @@ Create a third module &lt;code class=&quot;language-plaintext highlighter-rouge&
 
 &lt;p&gt;If &lt;strong&gt;module B&lt;/strong&gt; has &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;requires transitive&lt;/code&gt; dependency on &lt;strong&gt;module A&lt;/strong&gt; and &lt;strong&gt;module C&lt;/strong&gt; simpley &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;requires&lt;/code&gt; &lt;strong&gt;module B&lt;/strong&gt;, then &lt;strong&gt;module C&lt;/strong&gt; will have &lt;em&gt;implicit dependence&lt;/em&gt; on &lt;strong&gt;module A&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://github.com/atuladhar-aman/java9-basics/tree/master/04-java-transitive-dependency&quot;&gt;GitHub Code&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/amantuladhar/java9-basics/tree/master/04-java-transitive-dependency&quot;&gt;GitHub Code&lt;/a&gt;&lt;/p&gt;
 </content>
  </entry>
  
@@ -1197,8 +1196,8 @@ Create a third module &lt;code class=&quot;language-plaintext highlighter-rouge&
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;I will be modifying the example from previous post so, if you haven’t read it here’s a link to them&lt;/p&gt;
 &lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;http://atuladhar-aman.github.io/java/2017/10/03/java-9-module-intro.html&quot;&gt;Part 1: Java Module Basics/Intro&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://atuladhar-aman.github.io/java/2017/10/04/java-9-exports-and-requires.html&quot;&gt;Part 2: Java exports and requires keyword&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://amantuladhar.github.io/java/2017/10/03/java-9-module-intro.html&quot;&gt;Part 1: Java Module Basics/Intro&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://amantuladhar.github.io/java/2017/10/04/java-9-exports-and-requires.html&quot;&gt;Part 2: Java exports and requires keyword&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;From previous example I just modified the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;com.moduleone&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;module-info.java&lt;/code&gt; file to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;to&lt;/code&gt; keyword.&lt;/p&gt;
@@ -1283,7 +1282,7 @@ import com.moduleone.ModuleOne&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;h2 id=&quot;conclusion&quot;&gt;&lt;strong&gt;Conclusion&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;You can see the power of using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;exports&lt;/code&gt; with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;to&lt;/code&gt; here. If you want your code to be visible to only certain modules you can do that easily.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://github.com/atuladhar-aman/java9-basics/tree/master/03-export-to-specific-module-only&quot;&gt;GitHub Code&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/amantuladhar/java9-basics/tree/master/03-export-to-specific-module-only&quot;&gt;GitHub Code&lt;/a&gt;&lt;/p&gt;
 </content>
  </entry>
  
@@ -1331,7 +1330,7 @@ import com.moduleone.ModuleOne&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
 &lt;p&gt;&lt;strong&gt;OR&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;You can use the &lt;a href=&quot;https://github.com/atuladhar-aman/java9-basics/blob/master/01-module-basics/run.sh&quot;&gt;script I created to compile and run the program.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You can use the &lt;a href=&quot;https://github.com/amantuladhar/java9-basics/blob/master/01-module-basics/run.sh&quot;&gt;script I created to compile and run the program.&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;We run the code using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;./run.sh com.moduletwo ModuleTwo&lt;/code&gt;&lt;/p&gt;
 
@@ -1871,11 +1870,11 @@ If you want function call to delegate to the actual implemantation we need to ad
    <link href="https://babal.dev/2016/12/24/angular-testing-controller-with-dependency"/>
    <updated>2016-12-24T00:00:00-05:00</updated>
    <id>https://babal.dev/2016/12/24/angular-testing-controller-with-dependency</id>
-   <content type="html">&lt;p&gt;In &lt;a href=&quot;https://atuladhar-aman.github.io/blog/2016-11-30-angular-testing-controller/&quot;&gt;Part 4&lt;/a&gt; of this series we looked at 
+   <content type="html">&lt;p&gt;In &lt;a href=&quot;https://amantuladhar.github.io/blog/2016-11-30-angular-testing-controller/&quot;&gt;Part 4&lt;/a&gt; of this series we looked at
 how we can test AngularJS Controller which doesn’t have any dependencies. But, in real world,
 AngularJS Controllers usually dependent on Services. In this post we will look, how we can unit test controllers
 which have dependencies.
-On the way, we will explore how we can use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;angular.mock.module(...)&lt;/code&gt;. 
+On the way, we will explore how we can use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;angular.mock.module(...)&lt;/code&gt;.
 We will get insight on how &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;angular.mock.inject()&lt;/code&gt; works.&lt;/p&gt;
 
 &lt;p&gt;Here’s a simple todo app which has has &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TodoController&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TodoService&lt;/code&gt;. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TodoController&lt;/code&gt; is dependent on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TodoService&lt;/code&gt;.&lt;/p&gt;
@@ -2000,7 +1999,7 @@ This example shows the &lt;code class=&quot;language-plaintext highlighter-rouge
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Now that we know how angular &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;injector&lt;/code&gt; helps to locate our service, let’s look at how we can mock the service classes. Note: 
+&lt;p&gt;Now that we know how angular &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;injector&lt;/code&gt; helps to locate our service, let’s look at how we can mock the service classes. Note:
 above example calles the real service methods.&lt;/p&gt;
 
 &lt;h3 id=&quot;lets-mock-services-using-angularmockmodule-by-passing-object&quot;&gt;Let’s mock services using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;angular.mock.module(...)&lt;/code&gt; by passing object&lt;/h3&gt;
@@ -2187,7 +2186,6 @@ To mock service we use &lt;code class=&quot;language-plaintext highlighter-rouge
 
 &lt;p&gt;Above example is very simple and I don’t think it needs any explanation. In next post we will se how we can spy object using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;spyOn&lt;/code&gt;
 and change the behaviour of spied function.&lt;/p&gt;
-
 </content>
  </entry>
  
@@ -2196,7 +2194,7 @@ and change the behaviour of spied function.&lt;/p&gt;
    <link href="https://babal.dev/2016/11/30/angular-testing-controller"/>
    <updated>2016-11-30T00:00:00-05:00</updated>
    <id>https://babal.dev/2016/11/30/angular-testing-controller</id>
-   <content type="html">&lt;p&gt;In &lt;a href=&quot;https://atuladhar-aman.github.io/blog/2016-11-23-unit-testing-angular-1-part-1/&quot;&gt;Part 1&lt;/a&gt; &lt;a href=&quot;https://atuladhar-aman.github.io/blog/2016-11-24-integrate-karma-with-jasmine/&quot;&gt;Part 2&lt;/a&gt; and &lt;a href=&quot;https://atuladhar-aman.github.io/blog/2016-11-25-using-gulp-to-run-karma/&quot;&gt;Part 3&lt;/a&gt; of this article we didn’t talk a lot about testing. Those 3 parts were more focused on &lt;strong&gt;configuration&lt;/strong&gt; required to do testing.&lt;/p&gt;
+   <content type="html">&lt;p&gt;In &lt;a href=&quot;https://amantuladhar.github.io/blog/2016-11-23-unit-testing-angular-1-part-1/&quot;&gt;Part 1&lt;/a&gt; &lt;a href=&quot;https://atuladhar-aman.github.io/blog/2016-11-24-integrate-karma-with-jasmine/&quot;&gt;Part 2&lt;/a&gt; and &lt;a href=&quot;https://atuladhar-aman.github.io/blog/2016-11-25-using-gulp-to-run-karma/&quot;&gt;Part 3&lt;/a&gt; of this article we didn’t talk a lot about testing. Those 3 parts were more focused on &lt;strong&gt;configuration&lt;/strong&gt; required to do testing.&lt;/p&gt;
 
 &lt;p&gt;In this article I’ll show you how we can test simple AngularJS &lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Controllers&lt;/code&gt;&lt;/strong&gt;.&lt;/p&gt;
 
@@ -2282,9 +2280,9 @@ and change the behaviour of spied function.&lt;/p&gt;
     &lt;span class=&quot;nx&quot;&gt;beforeEach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;angular&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;mock&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_$controller_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;nx&quot;&gt;$controller&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;_$controller_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}));&lt;/span&gt;
-    
+
     &lt;span class=&quot;nx&quot;&gt;describe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;Test add functionality of Controller&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
-        
+
     &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
